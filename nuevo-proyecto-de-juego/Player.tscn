@@ -7,6 +7,7 @@
 radius = 20.024984
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(251, 224)
 script = ExtResource("1_kpjcp")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -17,3 +18,5 @@ shape = SubResource("CircleShape2D_kpjcp")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.328125, 0.328125)
 texture = ExtResource("1_xhfnw")
+
+[node name="SpawnPoint" type="Node2D" parent="."]
