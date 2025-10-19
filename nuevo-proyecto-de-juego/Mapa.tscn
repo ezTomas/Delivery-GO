@@ -8,7 +8,8 @@
 script = ExtResource("1_qgw4m")
 
 [node name="Player" parent="." instance=ExtResource("1_lbiw5")]
-position = Vector2(312, 295)
+position = Vector2(423, 508)
+rotation = -0.66704774
 scale = Vector2(2.6, 2.6)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
