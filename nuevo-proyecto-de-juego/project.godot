@@ -15,10 +15,18 @@ run/main_scene="uid://d0k4e2sk2mmnm"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalPoints="*res://Global_Points.gd"
+
 [display]
 
-window/size/viewport_width=600
-window/size/viewport_height=700
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
+[global_group]
+
+Bala=""
 
 [input_devices]
 
