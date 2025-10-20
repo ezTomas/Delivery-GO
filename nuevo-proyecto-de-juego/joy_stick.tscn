@@ -18,8 +18,5 @@ texture = ExtResource("2_xewsc")
 scale = Vector2(0.26966292, 0.26966295)
 texture = ExtResource("3_idfbb")
 
-[node name="SpawnPoint" type="Node2D" parent="Big_circle/Small_circle"]
-scale = Vector2(4.6875005, 4.6875)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_nhcwk")

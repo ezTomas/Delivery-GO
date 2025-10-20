@@ -3,8 +3,6 @@ extends CharacterBody2D
 
 var speed: float = 200.0
 
-#Disparo
-
 var touch: bool = false
 var posicion: Vector2
 

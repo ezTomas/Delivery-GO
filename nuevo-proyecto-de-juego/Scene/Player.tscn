@@ -19,6 +19,10 @@ shape = SubResource("CircleShape2D_kpjcp")
 scale = Vector2(0.328125, 0.328125)
 texture = ExtResource("1_xhfnw")
 
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(1.0000076, 2)
+scale = Vector2(4.6875005, 4.6875)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="JoyStick" parent="CanvasLayer" instance=ExtResource("3_jvxg0")]
