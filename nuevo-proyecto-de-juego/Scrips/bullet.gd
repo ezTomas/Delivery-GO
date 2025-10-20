@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
-var direction = 0.0
+var direction: Vector2 = Vector2.ZERO
 var speed = 800
 
 func _ready() -> void:
-	rotation = direction
+	rotation = direction.angle() 
 
 func _physics_process(delta: float) -> void:
-	velocity = Vector2(speed,0).rotated(rotation)
+	velocity = direction * speed
 	move_and_slide()

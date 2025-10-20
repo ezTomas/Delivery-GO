@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalPoints="*res://Global_Points.gd"
+GlobalPoints="*res://Scrips/Global_Points.gd"
 
 [display]
 
