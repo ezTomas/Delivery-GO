@@ -29,3 +29,8 @@ offset_bottom = 60.0
 
 [node name="Casa" parent="CanvasLayer/Panel/Label" instance=ExtResource("3_622qf")]
 position = Vector2(-233, 309)
+
+[node name="SpawnHouse" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="SpawnHouse" to="." method="_on_spawn_house_timeout"]
