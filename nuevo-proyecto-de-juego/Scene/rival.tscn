@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://h4kvyinh5df1"]
+
+[ext_resource type="Script" uid="uid://vcvtxouavy0x" path="res://Scrips/rival.gd" id="1_43q2v"]
+[ext_resource type="Texture2D" uid="uid://5uwpv150uugh" path="res://Cactus nose como se llama (1).png" id="1_qoid1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43q2v"]
+size = Vector2(30, 35)
+
+[node name="Rival" type="CharacterBody2D"]
+script = ExtResource("1_43q2v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qoid1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_43q2v")
+
+[node name="SpawnPointRival" type="Node2D" parent="."]

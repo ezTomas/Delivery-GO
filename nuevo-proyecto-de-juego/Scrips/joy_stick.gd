@@ -4,7 +4,7 @@ extends Area2D
 @onready var small_circle: Sprite2D = $Big_circle/Small_circle
 @onready var max_distance = $CollisionShape2D.shape.radius
 
-var bullet = preload("res://Scene/bullet.tscn")
+var bullet = preload("res://Scene/bulletPlayer.tscn")
 
 var touch = false 
 

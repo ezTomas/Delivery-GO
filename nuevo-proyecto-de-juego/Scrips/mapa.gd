@@ -11,10 +11,16 @@ func _physics_process(delta: float) -> void:
 
 func _on_spawn_house_timeout() -> void:
 	randomize()
-	var randomHouse = round(randf_range(1,2))
+	var randomHouse = round(randf_range(1,1))
 	
 	if randomHouse == 1:
 		var houseSpawn = house1.instantiate()
 		self.call_deferred("add_child", houseSpawn)
 		houseSpawn.position.y = -60
-		houseSpawn.position.x = round(randf_range(100,200))
+		houseSpawn.position.x = round(randf_range(200,200))
+	
+	if randomHouse == 1:
+		var houseSpawn = house1.instantiate()
+		self.call_deferred("add_child", houseSpawn)
+		houseSpawn.position.y = -60
+		houseSpawn.position.x = round(randf_range(1000,1000))

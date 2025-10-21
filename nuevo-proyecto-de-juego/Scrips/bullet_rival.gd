@@ -10,7 +10,7 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * speed
 	move_and_slide()
 
-func _on_area_bala_player_area_entered(area: Area2D) -> void:
+func _on_area_bala_rival_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Casa"):
 		GlobalPoints.points += 1
 		queue_free()

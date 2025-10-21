@@ -1,7 +1,9 @@
-extends Node2D
+extends CharacterBody2D
 
+var speed = 300
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Bala"):
-		GlobalPoints.points += 1
+func _physics_process(delta: float) -> void:
+	position.y += speed * delta
+	
+	if position.y > 800: # ajusta según el tamaño del viewport
+		queue_free()

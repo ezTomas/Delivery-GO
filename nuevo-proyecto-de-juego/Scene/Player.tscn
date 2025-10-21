@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bkqrw85ccvsn0" path="res://Scrips/player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://cpm3gd5roj80c" path="res://gato completo1.png" id="1_xhfnw"]
-[ext_resource type="PackedScene" uid="uid://c8qevha8i3wct" path="res://joy_stick.tscn" id="3_jvxg0"]
+[ext_resource type="PackedScene" uid="uid://c8qevha8i3wct" path="res://Scene/joy_stick.tscn" id="3_jvxg0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kpjcp"]
 radius = 20.024984
