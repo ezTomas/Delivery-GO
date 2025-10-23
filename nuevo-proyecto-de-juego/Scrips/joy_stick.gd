@@ -4,12 +4,13 @@ extends Area2D
 @onready var small_circle: Sprite2D = $Big_circle/Small_circle
 @onready var max_distance = $CollisionShape2D.shape.radius
 
-var bullet = preload("res://Scene/bullet.tscn")
+var bullet = preload("res://Scene/BulletPlayer.tscn")
 
 var touch = false 
+var stun: bool = false
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventScreenTouch:
+	if event is InputEventScreenTouch && stun == false:
 		var distance = event.position.distance_to(big_circle.global_position)
 		if not touch:
 			if distance < max_distance:

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpm3gd5roj80c"
-path="res://.godot/imported/gato completo1.png-dc8c7df8f13a74564abb416f32a262d4.ctex"
+uid="uid://w8bft66066xc"
+path="res://.godot/imported/keyboard_173.png-9a97ba69bf80c43387f44ecf1f7f04c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gato completo1.png"
-dest_files=["res://.godot/imported/gato completo1.png-dc8c7df8f13a74564abb416f32a262d4.ctex"]
+source_file="res://Assets/keyboard_173.png"
+dest_files=["res://.godot/imported/keyboard_173.png-9a97ba69bf80c43387f44ecf1f7f04c2.ctex"]
 
 [params]
 

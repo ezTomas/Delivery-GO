@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdyp04ddu8kh2"
-path="res://.godot/imported/circulo2.png-eef4e56ea319342ddc91a34d342ca165.ctex"
+uid="uid://ck6rtjma25oqu"
+path="res://.godot/imported/Cactus bola (1).png-ceb5930be30be08b844ebcd6c7b5dc09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://circulo2.png"
-dest_files=["res://.godot/imported/circulo2.png-eef4e56ea319342ddc91a34d342ca165.ctex"]
+source_file="res://Assets/Cactus bola (1).png"
+dest_files=["res://.godot/imported/Cactus bola (1).png-ceb5930be30be08b844ebcd6c7b5dc09.ctex"]
 
 [params]
 

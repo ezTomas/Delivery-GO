@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce85ufsv3vdf0"
-path="res://.godot/imported/circulo.png-417760db98098c6b9ea130dc814f88a4.ctex"
+uid="uid://bx5h5vtb8si56"
+path="res://.godot/imported/Edificio - Completo.png-f372414e798aaafb67627ff18a833637.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://circulo.png"
-dest_files=["res://.godot/imported/circulo.png-417760db98098c6b9ea130dc814f88a4.ctex"]
+source_file="res://Assets/Edificio - Completo.png"
+dest_files=["res://.godot/imported/Edificio - Completo.png-f372414e798aaafb67627ff18a833637.ctex"]
 
 [params]
 
