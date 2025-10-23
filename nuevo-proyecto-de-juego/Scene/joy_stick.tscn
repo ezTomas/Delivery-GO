@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c8qevha8i3wct"]
 
 [ext_resource type="Script" uid="uid://c5pu16p8calsl" path="res://Scrips/joy_stick.gd" id="1_g5623"]
-[ext_resource type="Texture2D" uid="uid://ce85ufsv3vdf0" path="res://circulo.png" id="2_xewsc"]
-[ext_resource type="Texture2D" uid="uid://bdyp04ddu8kh2" path="res://circulo2.png" id="3_idfbb"]
+[ext_resource type="Texture2D" uid="uid://ce85ufsv3vdf0" path="res://Assets/circulo.png" id="2_xewsc"]
+[ext_resource type="Texture2D" uid="uid://bdyp04ddu8kh2" path="res://Assets/circulo2.png" id="3_idfbb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nhcwk"]
 radius = 73.552704

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var bullet = preload("res://Scene/bullet_rival.tscn")
+var bullet = preload("res://Scene/BulletRival.tscn")
 
 func _ready() -> void:
 	randomize()

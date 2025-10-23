@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bnjc1eeqh7dju" path="res://Scene/Player.tscn" id="1_lbiw5"]
 [ext_resource type="Script" uid="uid://dyyys0f01bufh" path="res://Scrips/mapa.gd" id="1_qgw4m"]
-[ext_resource type="PackedScene" uid="uid://h4kvyinh5df1" path="res://Scene/rival.tscn" id="3_622qf"]
+[ext_resource type="PackedScene" uid="uid://h4kvyinh5df1" path="res://Scene/Rival.tscn" id="3_622qf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rml5n"]
 size = Vector2(76.467445, 21.141312)
@@ -25,13 +25,19 @@ offset_left = -147.0
 offset_bottom = 97.0
 grow_horizontal = 0
 
-[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+[node name="PlayerPoints" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 0
 offset_right = 150.0
 offset_bottom = 60.0
 
-[node name="SpawnHouse" type="Timer" parent="."]
-autostart = true
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+offset_right = 147.0
+offset_bottom = 97.0
+
+[node name="RivalPoints" type="Label" parent="CanvasLayer/Panel2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="Rival" parent="." instance=ExtResource("3_622qf")]
 position = Vector2(425, 553)
@@ -45,5 +51,13 @@ position = Vector2(0.5434952, 1.9021759)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_rml5n")
 
-[connection signal="timeout" from="SpawnHouse" to="." method="_on_spawn_house_timeout"]
+[node name="SpawnObstaculo" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="SpawnHouse" type="Timer" parent="."]
+autostart = true
+
 [connection signal="area_entered" from="Rival/AreaDeteccion" to="Rival" method="_on_area_deteccion_area_entered"]
+[connection signal="timeout" from="SpawnObstaculo" to="." method="_on_spawn_obstaculo_timeout"]
+[connection signal="timeout" from="SpawnHouse" to="." method="_on_spawn_house_timeout"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx5h5vtb8si56"
-path="res://.godot/imported/Edificio - Completo.png-f7b5ced239d137a4e258fd8216291f74.ctex"
+uid="uid://cpm3gd5roj80c"
+path="res://.godot/imported/gato completo1.png-274bb4e9d3092e2f255fc30440679e35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Edificio - Completo.png"
-dest_files=["res://.godot/imported/Edificio - Completo.png-f7b5ced239d137a4e258fd8216291f74.ctex"]
+source_file="res://Assets/gato completo1.png"
+dest_files=["res://.godot/imported/gato completo1.png-274bb4e9d3092e2f255fc30440679e35.ctex"]
 
 [params]
 
