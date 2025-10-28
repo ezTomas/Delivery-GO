@@ -1,13 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnjc1eeqh7dju"]
+[gd_scene load_steps=8 format=3 uid="uid://bnjc1eeqh7dju"]
 
 [ext_resource type="Script" uid="uid://bkqrw85ccvsn0" path="res://Scrips/player.gd" id="1_kpjcp"]
-[ext_resource type="Texture2D" uid="uid://cpm3gd5roj80c" path="res://Assets/gato completo1.png" id="1_xhfnw"]
-[ext_resource type="PackedScene" uid="uid://c8qevha8i3wct" path="res://Scene/Joy_stick.tscn" id="3_jvxg0"]
+[ext_resource type="Texture2D" uid="uid://fh6d0ngp2fsn" path="res://Assets/Jugador/Sprite1-jugador1.png" id="2_fvocf"]
+[ext_resource type="PackedScene" uid="uid://c8qevha8i3wct" path="res://Scene/joy_stick.tscn" id="3_jvxg0"]
 [ext_resource type="Texture2D" uid="uid://w8bft66066xc" path="res://Assets/keyboard_173.png" id="4_fvocf"]
 [ext_resource type="Texture2D" uid="uid://cxgcpytnc1slj" path="res://Assets/keyboard_174.png" id="5_pmp2f"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_kpjcp"]
-radius = 20.024984
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvocf"]
+size = Vector2(31, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmp2f"]
+size = Vector2(31, 82)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_kpjcp")
@@ -15,11 +18,12 @@ script = ExtResource("1_kpjcp")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_kpjcp")
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_fvocf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.328125, 0.328125)
-texture = ExtResource("1_xhfnw")
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("2_fvocf")
 
 [node name="SpawnPoint" type="Node2D" parent="."]
 position = Vector2(1.0000076, 2)
@@ -28,7 +32,8 @@ scale = Vector2(4.6875005, 4.6875)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="JoyStick" parent="CanvasLayer" instance=ExtResource("3_jvxg0")]
-position = Vector2(96, 617)
+position = Vector2(156, 575)
+scale = Vector2(1.215, 1.215)
 
 [node name="MoveRight" type="TouchScreenButton" parent="CanvasLayer"]
 position = Vector2(1162.0001, 584.00006)
@@ -43,7 +48,10 @@ texture_normal = ExtResource("5_pmp2f")
 action = "Left"
 
 [node name="TimerStun" type="Timer" parent="."]
-wait_time = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_pmp2f")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

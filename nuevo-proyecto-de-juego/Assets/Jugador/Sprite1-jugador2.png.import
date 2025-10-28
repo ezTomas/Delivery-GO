@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iy4xwfjet6pj"
-path="res://.godot/imported/Circulo2.png-6b5c7d873a27687288475e6a887809bf.ctex"
+uid="uid://g1w730j6ie7h"
+path="res://.godot/imported/Sprite1-jugador2.png-f806daa6ad9bba2d1851f68571d19e52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Circulo2.png"
-dest_files=["res://.godot/imported/Circulo2.png-6b5c7d873a27687288475e6a887809bf.ctex"]
+source_file="res://Assets/Jugador/Sprite1-jugador2.png"
+dest_files=["res://.godot/imported/Sprite1-jugador2.png-f806daa6ad9bba2d1851f68571d19e52.ctex"]
 
 [params]
 
