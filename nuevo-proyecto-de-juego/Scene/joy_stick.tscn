@@ -10,11 +10,11 @@ radius = 73.552704
 [node name="JoyStick" type="Area2D"]
 script = ExtResource("1_g5623")
 
-[node name="Big_circle" type="Sprite2D" parent="."]
+[node name="Rango" type="Sprite2D" parent="."]
 scale = Vector2(0.7911111, 0.7911111)
 texture = ExtResource("2_xewsc")
 
-[node name="Small_circle" type="Sprite2D" parent="Big_circle"]
+[node name="Palanca" type="Sprite2D" parent="Rango"]
 scale = Vector2(0.26966292, 0.26966295)
 texture = ExtResource("3_idfbb")
 
