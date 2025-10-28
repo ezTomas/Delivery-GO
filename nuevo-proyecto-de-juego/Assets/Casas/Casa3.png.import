@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce85ufsv3vdf0"
-path="res://.godot/imported/circulo.png-1c1c55fc2abdb73213729232e3cb0724.ctex"
+uid="uid://crmo7bdplu5pm"
+path="res://.godot/imported/Casa3.png-cb80c21f5b3ce9590df71bc62f4c3a1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/circulo.png"
-dest_files=["res://.godot/imported/circulo.png-1c1c55fc2abdb73213729232e3cb0724.ctex"]
+source_file="res://Assets/Casas/Casa3.png"
+dest_files=["res://.godot/imported/Casa3.png-cb80c21f5b3ce9590df71bc62f4c3a1f.ctex"]
 
 [params]
 

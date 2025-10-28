@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iy4xwfjet6pj"
-path="res://.godot/imported/Circulo2.png-6b5c7d873a27687288475e6a887809bf.ctex"
+uid="uid://7fj0a7nur65"
+path="res://.godot/imported/Bache1.png-1ac457289b50ee21be5782e17a4e8d19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Circulo2.png"
-dest_files=["res://.godot/imported/Circulo2.png-6b5c7d873a27687288475e6a887809bf.ctex"]
+source_file="res://Assets/Obstaculos/Bache1.png"
+dest_files=["res://.godot/imported/Bache1.png-1ac457289b50ee21be5782e17a4e8d19.ctex"]
 
 [params]
 

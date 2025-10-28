@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://buexqd7va7v8"]
 
 [ext_resource type="Script" uid="uid://bt5gv1kfoam0j" path="res://Scrips/obstaculo.gd" id="1_hoaiy"]
-[ext_resource type="Texture2D" uid="uid://ck6rtjma25oqu" path="res://Assets/Cactus bola (1).png" id="2_1o0xe"]
+[ext_resource type="Texture2D" uid="uid://7fj0a7nur65" path="res://Assets/Obstaculos/Bache1.png" id="2_hoaiy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b7umw"]
 radius = 33.01515
@@ -15,5 +15,5 @@ script = ExtResource("1_hoaiy")
 shape = SubResource("CircleShape2D_b7umw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2.4965003, 2.2170315)
-texture = ExtResource("2_1o0xe")
+scale = Vector2(0.5045041, 0.44799963)
+texture = ExtResource("2_hoaiy")

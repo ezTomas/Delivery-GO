@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iy4xwfjet6pj"
-path="res://.godot/imported/Circulo2.png-6b5c7d873a27687288475e6a887809bf.ctex"
+uid="uid://5baqhac6vwor"
+path="res://.godot/imported/Iglesia.png-e6441152f9da6a25081d1ce155c4f368.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Circulo2.png"
-dest_files=["res://.godot/imported/Circulo2.png-6b5c7d873a27687288475e6a887809bf.ctex"]
+source_file="res://Assets/Casas/Iglesia.png"
+dest_files=["res://.godot/imported/Iglesia.png-e6441152f9da6a25081d1ce155c4f368.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iy4xwfjet6pj"
-path="res://.godot/imported/Circulo2.png-6b5c7d873a27687288475e6a887809bf.ctex"
+uid="uid://dtj5u520arynf"
+path="res://.godot/imported/Kiosco.png-36b920168fb644d46d2ff9461b8a95ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Circulo2.png"
-dest_files=["res://.godot/imported/Circulo2.png-6b5c7d873a27687288475e6a887809bf.ctex"]
+source_file="res://Assets/Casas/Kiosco.png"
+dest_files=["res://.godot/imported/Kiosco.png-36b920168fb644d46d2ff9461b8a95ec.ctex"]
 
 [params]
 

@@ -1,15 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0k4e2sk2mmnm"]
+[gd_scene load_steps=6 format=3 uid="uid://d0k4e2sk2mmnm"]
 
 [ext_resource type="PackedScene" uid="uid://bnjc1eeqh7dju" path="res://Scene/Player.tscn" id="1_lbiw5"]
 [ext_resource type="Script" uid="uid://dyyys0f01bufh" path="res://Scrips/mapa.gd" id="1_qgw4m"]
-[ext_resource type="PackedScene" uid="uid://71dn50rihf3s" path="res://Scene/Calle.tscn" id="2_8dssv"]
+[ext_resource type="PackedScene" uid="uid://71dn50rihf3s" path="res://Calle.tscn" id="2_8dssv"]
 [ext_resource type="PackedScene" uid="uid://h4kvyinh5df1" path="res://Scene/rival.tscn" id="3_622qf"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dssv"]
-size = Vector2(27.02716, 717)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktb2n"]
-size = Vector2(35.055943, 734)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rml5n"]
 size = Vector2(76.467445, 21.141312)
@@ -20,40 +14,6 @@ script = ExtResource("1_qgw4m")
 
 [node name="CanvasLayer2" parent="." instance=ExtResource("2_8dssv")]
 layer = -1
-
-[node name="Limites" type="Node" parent="."]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Limites"]
-position = Vector2(634, 7)
-scale = Vector2(0.99840325, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/StaticBody2D"]
-position = Vector2(3.0047607, 358)
-shape = SubResource("RectangleShape2D_8dssv")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="Limites"]
-position = Vector2(1000, 0)
-scale = Vector2(0.99840325, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/StaticBody2D2"]
-position = Vector2(2.5040283, 357)
-shape = SubResource("RectangleShape2D_ktb2n")
-
-[node name="Timers" type="Node2D" parent="."]
-
-[node name="SpawnObstaculo" type="Timer" parent="Timers"]
-wait_time = 2.0
-autostart = true
-
-[node name="SpawnHouseEnemy" type="Timer" parent="Timers"]
-autostart = true
-
-[node name="SpawnHouse" type="Timer" parent="Timers"]
-autostart = true
-
-[node name="SpawnobstaculosEnemy" type="Timer" parent="Timers"]
-wait_time = 2.0
-autostart = true
 
 [node name="Player" parent="." instance=ExtResource("1_lbiw5")]
 position = Vector2(803, 547.99994)
@@ -95,8 +55,13 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[connection signal="timeout" from="Timers/SpawnObstaculo" to="." method="_on_spawn_obstaculo_timeout"]
-[connection signal="timeout" from="Timers/SpawnHouseEnemy" to="." method="_on_spawn_house_enemy_timeout"]
-[connection signal="timeout" from="Timers/SpawnHouse" to="." method="_on_spawn_house_timeout"]
-[connection signal="timeout" from="Timers/SpawnobstaculosEnemy" to="." method="_on_spawnobstaculos_enemy_timeout"]
+[node name="SpawnObstaculo" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="SpawnHouse" type="Timer" parent="."]
+autostart = true
+
 [connection signal="area_entered" from="Rival/AreaDeteccion" to="Rival" method="_on_area_deteccion_area_entered"]
+[connection signal="timeout" from="SpawnObstaculo" to="." method="_on_spawn_obstaculo_timeout"]
+[connection signal="timeout" from="SpawnHouse" to="." method="_on_spawn_house_timeout"]

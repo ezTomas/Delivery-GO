@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck6rtjma25oqu"
-path="res://.godot/imported/Cactus bola (1).png-ceb5930be30be08b844ebcd6c7b5dc09.ctex"
+uid="uid://bhe5ynocmgkuj"
+path="res://.godot/imported/BarMoe.png-2f6ade4e80ab7272a6b12197e5a30483.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cactus bola (1).png"
-dest_files=["res://.godot/imported/Cactus bola (1).png-ceb5930be30be08b844ebcd6c7b5dc09.ctex"]
+source_file="res://Assets/Casas/BarMoe.png"
+dest_files=["res://.godot/imported/BarMoe.png-2f6ade4e80ab7272a6b12197e5a30483.ctex"]
 
 [params]
 

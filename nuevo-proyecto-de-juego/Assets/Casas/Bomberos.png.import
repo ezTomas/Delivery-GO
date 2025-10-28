@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5uwpv150uugh"
-path="res://.godot/imported/Cactus nose como se llama (1).png-3fb12f743b2ed1823663c7005eaba4b7.ctex"
+uid="uid://b1d7oxucdnffl"
+path="res://.godot/imported/Bomberos.png-249a0a0091208e25054fe1c99e9eac3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cactus nose como se llama (1).png"
-dest_files=["res://.godot/imported/Cactus nose como se llama (1).png-3fb12f743b2ed1823663c7005eaba4b7.ctex"]
+source_file="res://Assets/Casas/Bomberos.png"
+dest_files=["res://.godot/imported/Bomberos.png-249a0a0091208e25054fe1c99e9eac3c.ctex"]
 
 [params]
 

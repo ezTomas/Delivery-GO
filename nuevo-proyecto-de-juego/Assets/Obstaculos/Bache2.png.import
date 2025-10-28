@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpm3gd5roj80c"
-path="res://.godot/imported/gato completo1.png-274bb4e9d3092e2f255fc30440679e35.ctex"
+uid="uid://g8il0g0f3gyl"
+path="res://.godot/imported/Bache2.png-7dde2693044f94f6971af8ee5b851cae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gato completo1.png"
-dest_files=["res://.godot/imported/gato completo1.png-274bb4e9d3092e2f255fc30440679e35.ctex"]
+source_file="res://Assets/Obstaculos/Bache2.png"
+dest_files=["res://.godot/imported/Bache2.png-7dde2693044f94f6971af8ee5b851cae.ctex"]
 
 [params]
 
