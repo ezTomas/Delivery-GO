@@ -3,11 +3,13 @@ extends Node2D
 @onready var playerPoints: Label = $CanvasLayer/Panel/PlayerPoints
 @onready var rivalPoints: Label = $CanvasLayer/Panel2/RivalPoints
 
+var house1 = preload("res://Scene/Casas/Casas_Jugador/casa.tscn")
+var house2 = preload("res://Scene/Casas/Casas_Jugador/Casa2.tscn")
+var house3 = preload("res://Scene/Casas/Casas_Jugador/Casa3.tscn")
 
-
-var house1 = preload("res://Scene/Casa.tscn")
-var house2 = preload("res://Scene/Casa2.tscn")
-var house3 = preload("res://Scene/Casa3.tscn")
+var houseRival1 = preload("res://Scene/Casas/Casas_Rival/CasaRival1.tscn")
+var houseRival2 = preload("res://Scene/Casas/Casas_Rival/CasaRival2.tscn")
+var houseRival3 = preload("res://Scene/Casas/Casas_Rival/CasaRival3.tscn")
 
 var obstaculo = preload("res://Scene/Obstaculo.tscn")
 
@@ -34,13 +36,13 @@ func _on_spawn_house_enemy_timeout() -> void:
 	
 	var randomHouse = round(randf_range(1,3))
 	if randomHouse == 1:
-		spawnCasaEnemy(house1)
+		spawnCasaEnemy(houseRival1)
 	
 	if randomHouse == 2:
-		spawnCasaEnemy(house2)
+		spawnCasaEnemy(houseRival2)
 
 	if randomHouse == 3:
-		spawnCasaEnemy(house3)
+		spawnCasaEnemy(houseRival3)
 
 func _on_spawn_obstaculo_timeout() -> void:
 	var randomObstaculo = round(randf_range(1,4))

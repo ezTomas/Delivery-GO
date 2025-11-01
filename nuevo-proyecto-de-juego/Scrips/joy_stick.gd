@@ -8,7 +8,7 @@ var distance: float
 var direccion: Vector2
 var index: int = -1
 
-var bullet = preload("res://Scene/BulletPlayer.tscn")
+var bullet = preload("res://Scene/Player/bulletPlayer.tscn")
 var stun: bool = false
 
 func _process(delta: float) -> void:

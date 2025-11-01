@@ -13,7 +13,7 @@ func _ready() -> void:
 	moverse()
 
 func _on_area_deteccion_area_entered(area: Area2D) -> void:
-	if area.is_in_group("Casa") && stun == false:
+	if area.is_in_group("Casa_Rival") && stun == false:
 		var disparo = round(randf_range(1,5))
 		if disparo <= 2:
 			var offset_y = 230.0

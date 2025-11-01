@@ -11,6 +11,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _on_area_bala_rival_area_entered(area: Area2D) -> void:
-	if area.is_in_group("Casa"):
+	if area.is_in_group("Casa_Rival"):
 		GlobalPoints.rivalPoints += 1
 		queue_free()
