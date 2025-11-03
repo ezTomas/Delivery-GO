@@ -1,0 +1,117 @@
+[gd_scene load_steps=9 format=3 uid="uid://vhwk5mdy3ri7"]
+
+[ext_resource type="Texture2D" uid="uid://dsfpl5w2h0rlt" path="res://Escenas/Menú de Niveles/NIVELES.png" id="1_n0v1q"]
+[ext_resource type="Script" uid="uid://dja285gvwene1" path="res://Escenas/Menú de Niveles/niveles.gd" id="1_y10rs"]
+[ext_resource type="Texture2D" uid="uid://2rr1nmb5wrlf" path="res://Escenas/Menú de Niveles/VOLVER.png" id="2_s45go"]
+[ext_resource type="Texture2D" uid="uid://bgq6v2p6ue68p" path="res://Escenas/Menú de Niveles/Cuadrado.png" id="3_y10rs"]
+[ext_resource type="Texture2D" uid="uid://lwojujdumaos" path="res://Escenas/Menú de Niveles/1.png" id="4_afj3q"]
+[ext_resource type="Texture2D" uid="uid://bgx1lrfoswqks" path="res://Escenas/Menú de Niveles/Candado abierto.png" id="5_ujc8w"]
+[ext_resource type="Texture2D" uid="uid://10peg64yijc0" path="res://Escenas/Menú de Niveles/2.png" id="6_pccxy"]
+[ext_resource type="Texture2D" uid="uid://dtkyb3vimhhd4" path="res://Escenas/Menú de Niveles/3.png" id="7_iw6mt"]
+
+[node name="Niveles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y10rs")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="Niveles" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -185.5
+offset_top = 30.0
+offset_right = 185.5
+offset_bottom = 121.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/Niveles"]
+layout_mode = 2
+texture = ExtResource("1_n0v1q")
+
+[node name="Volver" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="ColorRect/Volver"]
+layout_mode = 2
+icon = ExtResource("2_s45go")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -402.0
+offset_top = -183.0
+offset_right = 444.0
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" type="TextureRect" parent="ColorRect/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_y10rs")
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/HBoxContainer/1"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 340.0
+offset_right = 150.0
+offset_bottom = 380.0
+texture = ExtResource("4_afj3q")
+
+[node name="Button" type="Button" parent="ColorRect/HBoxContainer/1"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 65.0
+offset_right = 201.0
+offset_bottom = 282.0
+icon = ExtResource("5_ujc8w")
+
+[node name="2" type="TextureRect" parent="ColorRect/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_y10rs")
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/HBoxContainer/2"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 339.0
+offset_right = 156.0
+offset_bottom = 389.0
+texture = ExtResource("6_pccxy")
+
+[node name="3" type="TextureRect" parent="ColorRect/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_y10rs")
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/HBoxContainer/3"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 338.0
+offset_right = 156.0
+offset_bottom = 391.0
+texture = ExtResource("7_iw6mt")
+
+[connection signal="button_down" from="ColorRect/Volver/Button" to="." method="_on_button_Volver_down"]
