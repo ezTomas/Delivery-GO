@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds0t4tuvwwn4"]
+
+[ext_resource type="Script" uid="uid://breepbiouvu7x" path="res://Scene/Casas/Casas_pj_puntos/bomberos_pj_puntos.gd" id="1_dw308"]
+[ext_resource type="Texture2D" uid="uid://b1d7oxucdnffl" path="res://Assets/Casas/Bomberos.png" id="1_ywdai"]
+
+[node name="Bomberos" type="CharacterBody2D"]
+script = ExtResource("1_dw308")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.27999887, 0.35999948)
+texture = ExtResource("1_ywdai")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Casa"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

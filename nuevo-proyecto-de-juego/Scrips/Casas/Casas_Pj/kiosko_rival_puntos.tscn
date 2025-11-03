@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8f6fgpxghsob"]
+
+[ext_resource type="Script" uid="uid://bqvrgany16xhp" path="res://Scrips/Casas/Casas_Pj/kiosko_rival_puntos.gd" id="1_gfq22"]
+[ext_resource type="Texture2D" uid="uid://dtj5u520arynf" path="res://Assets/Casas/Kiosco.png" id="1_gso7t"]
+
+[node name="Kiosko" type="CharacterBody2D"]
+script = ExtResource("1_gfq22")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.27999887, 0.35999948)
+texture = ExtResource("1_gso7t")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Casa_Rival"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

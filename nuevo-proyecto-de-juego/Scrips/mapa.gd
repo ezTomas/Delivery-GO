@@ -11,10 +11,6 @@ var housePuntos1 = preload("res://Scene/Casas/Casas_pj_puntos/Casa_pj_puntos1.ts
 var housePuntos2 = preload("res://Scene/Casas/Casas_pj_puntos/Casa_pj_puntos2.tscn")
 var housePuntos3 = preload("res://Scene/Casas/Casas_pj_puntos/Casa_pj_puntos3.tscn")
 
-var houseRival1 = preload("res://Scene/Casas/Casas_Rival/CasaRival1.tscn")
-var houseRival2 = preload("res://Scene/Casas/Casas_Rival/CasaRival2.tscn")
-var houseRival3 = preload("res://Scene/Casas/Casas_Rival/CasaRival3.tscn")
-
 var houseRivalPuntos1 = preload("res://Scene/Casas/Casas_rival_puntos/Casa_rival_puntos1.tscn")
 var houseRivalPuntos2= preload("res://Scene/Casas/Casas_rival_puntos/Casa_rival_puntos2.tscn")
 var houseRivalPuntos3= preload("res://Scene/Casas/Casas_rival_puntos/Casa_rival_puntos3.tscn")
@@ -55,9 +51,9 @@ func _on_spawn_house_enemy_timeout() -> void:
 	else:
 		var normalHouse = randi_range(1, 3)
 		match normalHouse:
-			1: spawnCasaEnemy(houseRival1)
-			2: spawnCasaEnemy(houseRival2)
-			3: spawnCasaEnemy(houseRival3)
+			1: spawnCasaEnemy(house1)
+			2: spawnCasaEnemy(house2)
+			3: spawnCasaEnemy(house3)
 
 func _on_spawn_obstaculo_timeout() -> void:
 	var randomObstaculo = round(randf_range(1,4))

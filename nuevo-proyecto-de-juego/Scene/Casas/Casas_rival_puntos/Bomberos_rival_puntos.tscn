@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://df8nm723ws2f"]
+
+[ext_resource type="Script" uid="uid://dlptm8neb8r2a" path="res://Scene/Casas/Casas_rival_puntos/bomberos_rival_puntos.gd" id="1_eqgdm"]
+[ext_resource type="Texture2D" uid="uid://b1d7oxucdnffl" path="res://Assets/Casas/Bomberos.png" id="1_ycev1"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Casa_Rival"]]
+script = ExtResource("1_eqgdm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.27999887, 0.35999948)
+texture = ExtResource("1_ycev1")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
