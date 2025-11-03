@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1gge52md5x6x"]
 
 [ext_resource type="Texture2D" uid="uid://b1d7oxucdnffl" path="res://Assets/Casas/Bomberos.png" id="1_6wnbg"]
-[ext_resource type="Script" uid="uid://cq5brgirdium" path="res://Scene/Casas/Casas_Jugador/bomberos_pj.gd" id="1_dl2sy"]
+[ext_resource type="Script" uid="uid://cq5brgirdium" path="res://Scrips/Casas/Casas_Pj/bomberos_pj.gd" id="1_dl2sy"]
 
 [node name="Bomberos" type="CharacterBody2D"]
 script = ExtResource("1_dl2sy")

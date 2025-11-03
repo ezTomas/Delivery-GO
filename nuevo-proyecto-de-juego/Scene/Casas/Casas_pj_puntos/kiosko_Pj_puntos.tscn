@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://bejw4cnsp2a4o"]
 
-[ext_resource type="Texture2D" uid="uid://dtj5u520arynf" path="res://Assets/Casas/Kiosco.png" id="1_5sg2a"]
-[ext_resource type="Script" uid="uid://pbk0cc6lbv73" path="res://Scrips/Casas/Casas_Pj/kiosko_pj_puntos.gd" id="1_l5roa"]
+[ext_resource type="Script" uid="uid://pbk0cc6lbv73" path="res://Scrips/Casas/Casas__Pj_Puntos/kiosko_pj_puntos.gd" id="1_l2tts"]
+[ext_resource type="Texture2D" uid="uid://dtj5u520arynf" path="res://Assets/Casas/Kiosco.png" id="2_8kcev"]
 
 [node name="Kiosko" type="CharacterBody2D"]
-script = ExtResource("1_l5roa")
+script = ExtResource("1_l2tts")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.27999887, 0.35999948)
-texture = ExtResource("1_5sg2a")
+texture = ExtResource("2_8kcev")
 
 [node name="Area2D" type="Area2D" parent="." groups=["Casa"]]
 
