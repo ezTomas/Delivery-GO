@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjxt6l4ixy77x"]
+
+[ext_resource type="Script" uid="uid://c8ugib0ddykdv" path="res://Scrips/Casas/Casas__Pj_Puntos/casa_pj_puntos_2.gd" id="1_ormnn"]
+[ext_resource type="Texture2D" uid="uid://bwev8iwg2djpt" path="res://Assets/Casas/Casa2.png" id="2_6j80i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d22hb"]
+size = Vector2(127, 114)
+
+[node name="Casa2" type="CharacterBody2D"]
+script = ExtResource("1_ormnn")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Casa"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+modulate = Color(1, 1, 0.44705883, 1)
+position = Vector2(-10.5, 3)
+shape = SubResource("RectangleShape2D_d22hb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.44705883, 1)
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("2_6j80i")

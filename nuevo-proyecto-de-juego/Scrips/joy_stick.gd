@@ -29,6 +29,8 @@ func _input(event: InputEvent) -> void:
 			index = -1
 			palanca.position = Vector2.ZERO
 			direccion = Vector2.ZERO
+			await get_tree().create_timer(3.0).timeout
+			
 
 	if event is InputEventScreenDrag && stun == false:
 		if event.index == index:
