@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8f6fgpxghsob"]
+[gd_scene load_steps=4 format=3 uid="uid://b8f6fgpxghsob"]
 
-[ext_resource type="Script" uid="uid://bqvrgany16xhp" path="res://Scrips/Casas/Casas_Rival_puntos/kiosko_rival_puntos.gd" id="1_5d4g0"]
+[ext_resource type="Script" uid="uid://3igts76geyoq" path="res://Scrips/Casas/casa.gd" id="2_5d4g0"]
 [ext_resource type="Texture2D" uid="uid://dtj5u520arynf" path="res://Assets/Casas/Kiosco.png" id="2_ru457"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5d4g0"]
+size = Vector2(136, 106)
+
 [node name="Kiosko" type="CharacterBody2D"]
-script = ExtResource("1_5d4g0")
+modulate = Color(1, 1, 0.44705883, 1)
+script = ExtResource("2_5d4g0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.27999887, 0.35999948)
@@ -13,3 +17,5 @@ texture = ExtResource("2_ru457")
 [node name="Area2D" type="Area2D" parent="." groups=["Casa_Rival"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-7, -6)
+shape = SubResource("RectangleShape2D_5d4g0")

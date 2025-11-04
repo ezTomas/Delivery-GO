@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dutpksaw0byct"]
+
+[ext_resource type="Script" uid="uid://bt5gv1kfoam0j" path="res://Scrips/obstaculo.gd" id="1_mylfo"]
+[ext_resource type="Texture2D" uid="uid://baw1aeq0g3237" path="res://Assets/Obstaculos/Basural.png" id="2_lhpo6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b7umw"]
+radius = 33.01515
+
+[node name="Basural" type="CharacterBody2D"]
+script = ExtResource("1_mylfo")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Obstaculo"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_b7umw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.26450408, 0.27716202)
+texture = ExtResource("2_lhpo6")

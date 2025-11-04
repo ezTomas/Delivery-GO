@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cyoqylrruw45j"]
 
-[ext_resource type="Script" uid="uid://bbh18gi1efa43" path="res://Scrips/Casas/Casas__Pj_Puntos/casa_pj_puntos_3.gd" id="1_x8ci5"]
+[ext_resource type="Script" uid="uid://3igts76geyoq" path="res://Scrips/Casas/casa.gd" id="1_x8ci5"]
 [ext_resource type="Texture2D" uid="uid://crmo7bdplu5pm" path="res://Assets/Casas/Casa3.png" id="2_516gp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d22hb"]

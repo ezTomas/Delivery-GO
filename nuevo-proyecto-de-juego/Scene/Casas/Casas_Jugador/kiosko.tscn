@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8rfg58bcyenq"]
+[gd_scene load_steps=4 format=3 uid="uid://b8rfg58bcyenq"]
 
-[ext_resource type="Script" uid="uid://bkmwo04c1redt" path="res://Scrips/Casas/Casas_Pj/kiosko.gd" id="1_65k58"]
 [ext_resource type="Texture2D" uid="uid://dtj5u520arynf" path="res://Assets/Casas/Kiosco.png" id="1_haqpy"]
+[ext_resource type="Script" uid="uid://3igts76geyoq" path="res://Scrips/Casas/casa.gd" id="2_mnbm8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnbm8"]
+size = Vector2(122, 128)
 
 [node name="Kiosko" type="CharacterBody2D"]
-script = ExtResource("1_65k58")
+script = ExtResource("2_mnbm8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.27999887, 0.35999948)
@@ -13,3 +16,5 @@ texture = ExtResource("1_haqpy")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4, -3)
+shape = SubResource("RectangleShape2D_mnbm8")

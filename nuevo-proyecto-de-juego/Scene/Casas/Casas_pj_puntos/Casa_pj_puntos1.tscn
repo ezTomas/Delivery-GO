@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://ba3i1srx68cm1"]
 
-[ext_resource type="Script" uid="uid://d33x1mdnyxw01" path="res://Scrips/Casas/Casas__Pj_Puntos/casa_pj_puntos_1.gd" id="1_aieby"]
 [ext_resource type="Texture2D" uid="uid://8owbieca8aut" path="res://Assets/Casas/Casa1.png" id="1_w5jeq"]
+[ext_resource type="Script" uid="uid://3igts76geyoq" path="res://Scrips/Casas/casa.gd" id="1_y55ee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d22hb"]
 size = Vector2(98, 98)
 
 [node name="Casa1" type="CharacterBody2D"]
-script = ExtResource("1_aieby")
+script = ExtResource("1_y55ee")
 
 [node name="Area2D" type="Area2D" parent="." groups=["Casa"]]
 

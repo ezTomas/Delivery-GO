@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1gge52md5x6x"]
+[gd_scene load_steps=4 format=3 uid="uid://b1gge52md5x6x"]
 
 [ext_resource type="Texture2D" uid="uid://b1d7oxucdnffl" path="res://Assets/Casas/Bomberos.png" id="1_6wnbg"]
-[ext_resource type="Script" uid="uid://cq5brgirdium" path="res://Scrips/Casas/Casas_Pj/bomberos_pj.gd" id="1_dl2sy"]
+[ext_resource type="Script" uid="uid://3igts76geyoq" path="res://Scrips/Casas/casa.gd" id="2_dl2sy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dl2sy"]
+size = Vector2(141, 114)
 
 [node name="Bomberos" type="CharacterBody2D"]
-script = ExtResource("1_dl2sy")
+script = ExtResource("2_dl2sy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.27999887, 0.35999948)
@@ -13,3 +16,5 @@ texture = ExtResource("1_6wnbg")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-7.5, -1)
+shape = SubResource("RectangleShape2D_dl2sy")
