@@ -46,8 +46,7 @@ func _on_spawn_house_timeout() -> void:
 	else:
 		spawnCasa(normal_house.pick_random())
 
-func _on_spawn_house_enemy_timeout() -> void:
-	
+func _on_spawn_house_enemy_timeout() -> void:	
 	var randomHouse = randi_range(1,10)
 	if randomHouse <= 2:
 		spawnCasaEnemy(houseRivalPuntos.pick_random())

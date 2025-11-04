@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://8nh7af5g6pdi"]
 
 [ext_resource type="PackedScene" uid="uid://71dn50rihf3s" path="res://Scene/Calle.tscn" id="1_oaeky"]
-[ext_resource type="Script" uid="uid://dyyys0f01bufh" path="res://Scrips/mapa.gd" id="1_p4qdr"]
+[ext_resource type="Script" uid="uid://byfms6xwtu22u" path="res://nivel_2.gd" id="1_p4qdr"]
 [ext_resource type="PackedScene" uid="uid://bnjc1eeqh7dju" path="res://Scene/Player/Player.tscn" id="2_p4qdr"]
 [ext_resource type="PackedScene" uid="uid://h4kvyinh5df1" path="res://Scene/rival.tscn" id="3_lj8fh"]
 
