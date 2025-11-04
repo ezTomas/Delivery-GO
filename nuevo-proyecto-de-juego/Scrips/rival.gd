@@ -14,16 +14,28 @@ func _ready() -> void:
 
 func _on_area_deteccion_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Casa_Rival") && stun == false:
-		var disparo = round(randf_range(1,5))
-		if disparo <= 2:
-			var offset_y = 230.0
-			var target_pos = area.global_position + Vector2(0, offset_y)
-			var direction = (target_pos - global_position).normalized()
-			shoot(direction)
+		var disparo = round(randf_range(0,100))
+		if GlobalPoints.nivel == 0:
+			if disparo <= 30:
+				var offset_y = 230.0
+				var target_pos = area.global_position + Vector2(0, offset_y)
+				var direction = (target_pos - global_position).normalized()
+				shoot(direction)
+		if GlobalPoints.nivel == 1:
+			if disparo <= 50:
+				var offset_y = 230.0
+				var target_pos = area.global_position + Vector2(0, offset_y)
+				var direction = (target_pos - global_position).normalized()
+				shoot(direction)
+		if GlobalPoints.nivel == 2:
+			if disparo <= 80:
+				var offset_y = 230.0
+				var target_pos = area.global_position + Vector2(0, offset_y)
+				var direction = (target_pos - global_position).normalized()
+				shoot(direction)
 
 func _on_area_rival_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Obstaculo"):
-		print("Stuneado")
 		stun = true
 		stunTimer.start()
 

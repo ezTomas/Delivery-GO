@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0k4e2sk2mmnm"]
+[gd_scene load_steps=8 format=3 uid="uid://8nh7af5g6pdi"]
 
-[ext_resource type="PackedScene" uid="uid://bnjc1eeqh7dju" path="res://Scene/Player/Player.tscn" id="1_lbiw5"]
-[ext_resource type="Script" uid="uid://dyyys0f01bufh" path="res://Scrips/mapa.gd" id="1_qgw4m"]
-[ext_resource type="PackedScene" uid="uid://71dn50rihf3s" path="res://Scene/Calle.tscn" id="2_8dssv"]
-[ext_resource type="PackedScene" uid="uid://h4kvyinh5df1" path="res://Scene/rival.tscn" id="3_622qf"]
+[ext_resource type="PackedScene" uid="uid://71dn50rihf3s" path="res://Scene/Calle.tscn" id="1_oaeky"]
+[ext_resource type="Script" uid="uid://byfms6xwtu22u" path="res://nivel_2.gd" id="1_p4qdr"]
+[ext_resource type="PackedScene" uid="uid://bnjc1eeqh7dju" path="res://Scene/Player/Player.tscn" id="2_p4qdr"]
+[ext_resource type="PackedScene" uid="uid://h4kvyinh5df1" path="res://Scene/rival.tscn" id="3_lj8fh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8dssv"]
 size = Vector2(27.02716, 717)
@@ -14,11 +14,11 @@ size = Vector2(35.055943, 734)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rml5n"]
 size = Vector2(76.467445, 21.141312)
 
-[node name="Mapa" type="Node2D"]
+[node name="Nivel2" type="Node2D"]
 scale = Vector2(0.99840325, 1)
-script = ExtResource("1_qgw4m")
+script = ExtResource("1_p4qdr")
 
-[node name="CanvasLayer2" parent="." instance=ExtResource("2_8dssv")]
+[node name="CanvasLayer2" parent="." instance=ExtResource("1_oaeky")]
 layer = -1
 
 [node name="Limites" type="Node" parent="."]
@@ -55,11 +55,11 @@ autostart = true
 wait_time = 1.9
 autostart = true
 
-[node name="Player" parent="." instance=ExtResource("1_lbiw5")]
+[node name="Player" parent="." instance=ExtResource("2_p4qdr")]
 position = Vector2(803, 547.99994)
 scale = Vector2(2.6, 2.6396883)
 
-[node name="Rival" parent="." instance=ExtResource("3_622qf")]
+[node name="Rival" parent="." instance=ExtResource("3_lj8fh")]
 position = Vector2(425, 553)
 scale = Vector2(3.6799974, 3.6799974)
 

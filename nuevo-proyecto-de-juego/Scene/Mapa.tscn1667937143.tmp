@@ -42,7 +42,7 @@ shape = SubResource("RectangleShape2D_ktb2n")
 [node name="Timers" type="Node2D" parent="."]
 
 [node name="SpawnObstaculo" type="Timer" parent="Timers"]
-wait_time = 2.1999999999999997
+wait_time = 2.0
 autostart = true
 
 [node name="SpawnHouseEnemy" type="Timer" parent="Timers"]
@@ -52,7 +52,7 @@ autostart = true
 autostart = true
 
 [node name="SpawnobstaculosEnemy" type="Timer" parent="Timers"]
-wait_time = 1.9
+wait_time = 2.0
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource("1_lbiw5")]
