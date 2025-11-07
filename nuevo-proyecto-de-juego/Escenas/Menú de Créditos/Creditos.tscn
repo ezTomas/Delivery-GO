@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://w3trnto4p2r"]
+
+[ext_resource type="Script" uid="uid://ceuuxdlgdpp3d" path="res://Escenas/Menú de Créditos/creditos.gd" id="1_xn36u"]
+[ext_resource type="Texture2D" uid="uid://dgrb6endcul8q" path="res://Escenas/Menú de Créditos/PARTICIPANTES.png" id="2_sl7li"]
+[ext_resource type="Texture2D" uid="uid://2rr1nmb5wrlf" path="res://Escenas/Menú de Niveles/VOLVER.png" id="3_jy2s3"]
+[ext_resource type="Texture2D" uid="uid://d0chvfcmr3k6o" path="res://Escenas/Menú de Créditos/CREDITOS.png" id="4_7fpni"]
+
+[node name="Creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xn36u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="BParticipantes" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 271.0
+offset_right = 1016.0
+offset_bottom = 498.0
+
+[node name="Texto" type="TextureRect" parent="ColorRect/BParticipantes"]
+layout_mode = 2
+texture = ExtResource("2_sl7li")
+
+[node name="BVolver" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 596.0
+offset_right = 689.0
+offset_bottom = 721.0
+script = ExtResource("1_xn36u")
+
+[node name="Volver" type="Button" parent="ColorRect/BVolver"]
+layout_mode = 2
+icon = ExtResource("3_jy2s3")
+
+[node name="BCreditos" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -440.0
+offset_top = 30.0
+offset_right = 223.0
+offset_bottom = 652.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Creditos" type="TextureRect" parent="ColorRect/BCreditos"]
+layout_mode = 2
+texture = ExtResource("4_7fpni")
+stretch_mode = 3
+
+[connection signal="button_down" from="ColorRect/BVolver/Volver" to="." method="_on_volver_button_down"]
