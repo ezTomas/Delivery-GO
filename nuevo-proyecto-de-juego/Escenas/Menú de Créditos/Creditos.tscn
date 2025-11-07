@@ -15,33 +15,13 @@ grow_vertical = 2
 script = ExtResource("1_xn36u")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1080.0
-offset_bottom = 720.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
-
-[node name="BParticipantes" type="VBoxContainer" parent="ColorRect"]
-layout_mode = 0
-offset_left = 51.0
-offset_top = 271.0
-offset_right = 1016.0
-offset_bottom = 498.0
-
-[node name="Texto" type="TextureRect" parent="ColorRect/BParticipantes"]
-layout_mode = 2
-texture = ExtResource("2_sl7li")
-
-[node name="BVolver" type="VBoxContainer" parent="ColorRect"]
-layout_mode = 0
-offset_left = 440.0
-offset_top = 596.0
-offset_right = 689.0
-offset_bottom = 721.0
-script = ExtResource("1_xn36u")
-
-[node name="Volver" type="Button" parent="ColorRect/BVolver"]
-layout_mode = 2
-icon = ExtResource("3_jy2s3")
 
 [node name="BCreditos" type="VBoxContainer" parent="ColorRect"]
 layout_mode = 1
@@ -59,5 +39,46 @@ alignment = 1
 layout_mode = 2
 texture = ExtResource("4_7fpni")
 stretch_mode = 3
+
+[node name="BParticipantes" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -482.5
+offset_top = -113.5
+offset_right = 482.5
+offset_bottom = 113.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Texto" type="TextureRect" parent="ColorRect/BParticipantes"]
+layout_mode = 2
+texture = ExtResource("2_sl7li")
+
+[node name="BVolver" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.5
+offset_top = -125.0
+offset_right = 124.5
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_xn36u")
+
+[node name="Volver" type="Button" parent="ColorRect/BVolver"]
+layout_mode = 2
+icon = ExtResource("3_jy2s3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="button_down" from="ColorRect/BVolver/Volver" to="." method="_on_volver_button_down"]

@@ -27,12 +27,12 @@ var obstaculos=[
 
 func _ready() -> void:
 	randomize()
-	GlobalPoints.points = 0
+	GlobalPoints.points_nivel1 = 0
 	GlobalPoints.rivalPoints = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	player_points.text = (str(GlobalPoints.points) + " de 10")
+	player_points.text = (str(GlobalPoints.points_nivel1) + " de 10")
 	rival_points.text = (str(GlobalPoints.rivalPoints) + " de 10")
 
 func _on_spawn_house_timeout() -> void:
