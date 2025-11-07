@@ -1,9 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bv52x5wspnjft"]
+[gd_scene load_steps=7 format=3 uid="uid://bv52x5wspnjft"]
 
 [ext_resource type="Script" uid="uid://bvkib4twq17me" path="res://Escenas/Menú de Tienda/menu_tienda.gd" id="1_wsjfw"]
 [ext_resource type="Texture2D" uid="uid://hx8b4e0asqoa" path="res://Escenas/Menú de Tienda/Fondo.png" id="2_b6pbq"]
-[ext_resource type="Texture2D" uid="uid://2rr1nmb5wrlf" path="res://Escenas/Menú de Niveles/VOLVER.png" id="3_ow22n"]
-[ext_resource type="Texture2D" uid="uid://ctkcd5gixb8ff" path="res://Escenas/Menú de Tienda/TIENDA.png" id="4_eii6g"]
 [ext_resource type="Texture2D" uid="uid://bohqpty57kos5" path="res://Escenas/Menú de Tienda/VER.png" id="5_abdp3"]
 [ext_resource type="Texture2D" uid="uid://d37mjbktwvb6g" path="res://Escenas/Menú de Tienda/COMPRAR.png" id="6_1thib"]
 [ext_resource type="Texture2D" uid="uid://cwkl3c5v3buua" path="res://Escenas/Menú de Tienda/MEJORAR.png" id="7_xgr2x"]
@@ -18,84 +16,83 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wsjfw")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1080.0
-offset_bottom = 720.0
-
-[node name="Fondo" type="TextureRect" parent="ColorRect"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -540.0
-offset_top = -361.0
-offset_right = 540.0
-offset_bottom = 363.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_b6pbq")
-expand_mode = 1
-
-[node name="Volver" type="VBoxContainer" parent="ColorRect"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
+offset_right = 40.0
 offset_bottom = 40.0
-grow_horizontal = 0
+texture = ExtResource("2_b6pbq")
 
-[node name="Button" type="Button" parent="ColorRect/Volver"]
-layout_mode = 2
-icon = ExtResource("3_ow22n")
-
-[node name="Tienda" type="VBoxContainer" parent="ColorRect"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -185.0
-offset_top = 50.0
-offset_right = 185.0
-offset_bottom = 146.0
-grow_horizontal = 2
-
-[node name="TextureRect" type="TextureRect" parent="ColorRect/Tienda"]
-layout_mode = 2
-texture = ExtResource("4_eii6g")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -468.0
-offset_top = -170.0
-offset_right = 469.0
-offset_bottom = -90.0
-grow_horizontal = 2
+offset_top = -80.0
+offset_right = 937.0
 grow_vertical = 0
 
-[node name="Obtener" type="Button" parent="ColorRect/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 95
+
+[node name="Obtener" type="Button" parent="TextureRect/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 icon = ExtResource("8_g8uh5")
+flat = true
 
-[node name="Mejorar" type="Button" parent="ColorRect/HBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 103
+
+[node name="Mejorar" type="Button" parent="TextureRect/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 icon = ExtResource("7_xgr2x")
+flat = true
 
-[node name="Ver" type="Button" parent="ColorRect/HBoxContainer"]
+[node name="MarginContainer3" type="MarginContainer" parent="TextureRect/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 139
+
+[node name="Ver" type="Button" parent="TextureRect/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 icon = ExtResource("5_abdp3")
+flat = true
 
-[node name="Comprar" type="Button" parent="ColorRect/HBoxContainer"]
+[node name="MarginContainer4" type="MarginContainer" parent="TextureRect/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 145
+
+[node name="Comprar" type="Button" parent="TextureRect/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 icon = ExtResource("6_1thib")
+flat = true
+icon_alignment = 1
 
-[connection signal="button_down" from="ColorRect/Volver/Button" to="." method="_on_button_button_down"]
+[node name="MarginContainer3" type="MarginContainer" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 130
+theme_override_constants/margin_right = -30
+theme_override_constants/margin_bottom = 140
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 55
+theme_override_constants/margin_right = -75
+
+[node name="Button" type="Button" parent="TextureRect/MarginContainer"]
+layout_mode = 2
+text = "-"
+flat = true
+
+[connection signal="pressed" from="TextureRect/HBoxContainer/HBoxContainer/Obtener" to="." method="_on_obtener_pressed"]
+[connection signal="pressed" from="TextureRect/HBoxContainer/HBoxContainer/Mejorar" to="." method="_on_mejorar_pressed"]
+[connection signal="pressed" from="TextureRect/HBoxContainer/HBoxContainer/Ver" to="." method="_on_ver_pressed"]
+[connection signal="pressed" from="TextureRect/HBoxContainer/HBoxContainer/Comprar" to="." method="_on_comprar_pressed"]
+[connection signal="pressed" from="TextureRect/MarginContainer/Button" to="." method="_on_button_pressed"]
