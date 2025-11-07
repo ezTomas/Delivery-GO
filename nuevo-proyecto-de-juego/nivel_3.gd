@@ -7,37 +7,44 @@ extends Node2D
 var normal_house = [
 	preload("res://Scene/Casas/Casas_Jugador/Bomberos_pj.tscn"),
 	preload("res://Scene/Casas/Casas_Jugador/casa_4.tscn"),
-	preload("res://Scene/Casas/Casas_Jugador/casa_5.tscn"),
-	preload("res://Scene/Casas/Casas_Jugador/kiosko.tscn")
+	preload("res://Scene/Casas/Casas_Jugador/kiosko.tscn"),
+	preload("res://Scene/Casas/Casas_Jugador/iglesia.tscn"),
+	preload("res://Scene/Casas/Casas_Jugador/policia.tscn"),
+	preload("res://Scene/Casas/Casas_Jugador/local.tscn")
 ]
 var housePuntos = [
 	preload("res://Scene/Casas/Casas_pj_puntos/bomberos_pj_puntos.tscn"),
 	preload("res://Scene/Casas/Casas_pj_puntos/casa_4_pj_puntos.tscn"),
-	preload("res://Scene/Casas/Casas_pj_puntos/casa_5_pj_puntos.tscn"),
-	preload("res://Scene/Casas/Casas_pj_puntos/kiosko_Pj_puntos.tscn")
+	preload("res://Scene/Casas/Casas_pj_puntos/kiosko_Pj_puntos.tscn"),
+	preload("res://Scene/Casas/Casas_pj_puntos/policia_pj_puntos.tscn"),
+	preload("res://Scene/Casas/Casas_pj_puntos/iglesia_pj_puntos.tscn"),
+	preload("res://Scene/Casas/Casas_pj_puntos/local_pj_puntos.tscn")
 ]
 var houseRivalPuntos = [
 	preload("res://Scene/Casas/Casas_rival_puntos/Bomberos_rival_puntos.tscn"),
 	preload("res://Scene/Casas/Casas_rival_puntos/casa_4_rival_puntos.tscn"),
-	preload("res://Scene/Casas/Casas_rival_puntos/casa_5_rival_puntos.tscn"),
-	preload("res://Scene/Casas/Casas_rival_puntos/kiosko_rival_puntos.tscn")
+	preload("res://Scene/Casas/Casas_rival_puntos/kiosko_rival_puntos.tscn"),
+	preload("res://Scene/Casas/Casas_rival_puntos/iglesia_rival_puntos.tscn"),
+	preload("res://Scene/Casas/Casas_rival_puntos/policia_rival_puntos.tscn"),
+	preload("res://Scene/Casas/Casas_rival_puntos/local_rival_puntos.tscn")
 ]
 
 var obstaculos = [
 	preload("res://Scene/obstaculo_2.tscn"),
 	preload("res://Scene/aceite.tscn"),
-	preload("res://Scene/cono.tscn")
+	preload("res://Scene/cono.tscn"),
+	preload("res://Scene/basural.tscn")
 ]
-
+# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()
-	GlobalPoints.points_nivel2 = 0
+	GlobalPoints.points_nivel3 = 0
 	GlobalPoints.rivalPoints = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	player_points.text = (str(GlobalPoints.points_nivel2) + " de 15")
-	rival_points.text = (str(GlobalPoints.rivalPoints) + " de 15")
+	player_points.text = (str(GlobalPoints.points_nivel3) + " de 18")
+	rival_points.text = (str(GlobalPoints.rivalPoints) + " de 18")
 
 func _on_spawn_house_timeout() -> void:
 	var randomHouse = randi_range(1,10)
@@ -46,7 +53,7 @@ func _on_spawn_house_timeout() -> void:
 	else:
 		spawnCasa(normal_house.pick_random())
 
-func _on_spawn_house_enemy_timeout() -> void:	
+func _on_spawn_house_enemy_timeout() -> void:
 	var randomHouse = randi_range(1,10)
 	if randomHouse <= 2:
 		spawnCasaEnemy(houseRivalPuntos.pick_random())
