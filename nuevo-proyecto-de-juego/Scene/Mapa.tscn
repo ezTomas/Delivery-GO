@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0k4e2sk2mmnm"]
+[gd_scene load_steps=9 format=3 uid="uid://d0k4e2sk2mmnm"]
 
 [ext_resource type="PackedScene" uid="uid://bnjc1eeqh7dju" path="res://Scene/Player/Player.tscn" id="1_lbiw5"]
 [ext_resource type="Script" uid="uid://dyyys0f01bufh" path="res://Scrips/mapa.gd" id="1_qgw4m"]
 [ext_resource type="PackedScene" uid="uid://71dn50rihf3s" path="res://Scene/Calle.tscn" id="2_8dssv"]
 [ext_resource type="PackedScene" uid="uid://h4kvyinh5df1" path="res://Scene/rival.tscn" id="3_622qf"]
+[ext_resource type="AudioStream" uid="uid://ckoc7w0t4apcs" path="res://Audio/Quincas Moreira - Robot City  NO COPYRIGHT 8-bit Music.mp3" id="5_ktb2n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8dssv"]
 size = Vector2(27.02716, 717)
@@ -99,8 +100,13 @@ offset_right = 40.0
 offset_bottom = 23.0
 metadata/_edit_use_anchors_ = true
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ktb2n")
+volume_db = -12.093
+
 [connection signal="timeout" from="Timers/SpawnObstaculo" to="." method="_on_spawn_obstaculo_timeout"]
 [connection signal="timeout" from="Timers/SpawnHouseEnemy" to="." method="_on_spawn_house_enemy_timeout"]
 [connection signal="timeout" from="Timers/SpawnHouse" to="." method="_on_spawn_house_timeout"]
 [connection signal="timeout" from="Timers/SpawnobstaculosEnemy" to="." method="_on_spawnobstaculos_enemy_timeout"]
 [connection signal="area_entered" from="Rival/AreaDeteccion" to="Rival" method="_on_area_deteccion_area_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

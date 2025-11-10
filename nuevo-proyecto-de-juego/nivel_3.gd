@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var player_points: Label = $CanvasLayer/Panel/PlayerPoints
 @onready var rival_points: Label = $CanvasLayer/Panel2/RivalPoints
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 
 var normal_house = [
@@ -40,6 +41,7 @@ func _ready() -> void:
 	randomize()
 	GlobalPoints.points_nivel3 = 0
 	GlobalPoints.rivalPoints = 0
+	audio_stream_player.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -93,3 +95,7 @@ func spawnRivalObstaculo(obstaculo):
 	self.call_deferred("add_child", obstaculoSpawn)
 	obstaculoSpawn.position.y = -60
 	obstaculoSpawn.position.x = round(randf_range(300,600))
+
+
+func _on_audio_stream_player_finished() -> void:
+	audio_stream_player.play()

@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://8nh7af5g6pdi"]
+[gd_scene load_steps=9 format=3 uid="uid://8nh7af5g6pdi"]
 
 [ext_resource type="PackedScene" uid="uid://71dn50rihf3s" path="res://Scene/Calle.tscn" id="1_oaeky"]
 [ext_resource type="Script" uid="uid://byfms6xwtu22u" path="res://nivel_2.gd" id="1_p4qdr"]
 [ext_resource type="PackedScene" uid="uid://bnjc1eeqh7dju" path="res://Scene/Player/Player.tscn" id="2_p4qdr"]
 [ext_resource type="PackedScene" uid="uid://h4kvyinh5df1" path="res://Scene/rival.tscn" id="3_lj8fh"]
+[ext_resource type="AudioStream" uid="uid://ckoc7w0t4apcs" path="res://Audio/Quincas Moreira - Robot City  NO COPYRIGHT 8-bit Music.mp3" id="5_lj8fh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8dssv"]
 size = Vector2(27.02716, 717)
@@ -71,6 +72,9 @@ position = Vector2(0.5434952, 1.9021759)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_rml5n")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_lj8fh")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
@@ -100,3 +104,4 @@ offset_bottom = 23.0
 [connection signal="timeout" from="Timers/SpawnHouse" to="." method="_on_spawn_house_timeout"]
 [connection signal="timeout" from="Timers/SpawnobstaculosEnemy" to="." method="_on_spawnobstaculos_enemy_timeout"]
 [connection signal="area_entered" from="Rival/AreaDeteccion" to="Rival" method="_on_area_deteccion_area_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
