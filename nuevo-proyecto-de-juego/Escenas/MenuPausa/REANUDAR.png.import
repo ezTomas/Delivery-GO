@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxgcpytnc1slj"
-path="res://.godot/imported/keyboard_174.png-0c13b2af826b3f4d921cec37f748bfcd.ctex"
+uid="uid://btmxyn7n7nvob"
+path="res://.godot/imported/REANUDAR.png-ace25b8593d6dbbddb299b5a9880803a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/keyboard_174.png"
-dest_files=["res://.godot/imported/keyboard_174.png-0c13b2af826b3f4d921cec37f748bfcd.ctex"]
+source_file="res://Escenas/MenuPausa/REANUDAR.png"
+dest_files=["res://.godot/imported/REANUDAR.png-ace25b8593d6dbbddb299b5a9880803a.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5pu16p8calsl" path="res://Scrips/joy_stick.gd" id="1_g5623"]
 [ext_resource type="Texture2D" uid="uid://c0cqjee655lo2" path="res://Assets/Circulo1.png" id="2_yu7bw"]
-[ext_resource type="Texture2D" uid="uid://iy4xwfjet6pj" path="res://Assets/Circulo2.png" id="3_s0lum"]
+[ext_resource type="Texture2D" uid="uid://bmgtq7iw62uqy" path="res://Assets/LANZAR.png" id="3_ra4wk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nhcwk"]
 radius = 73.552704
@@ -16,7 +16,7 @@ texture = ExtResource("2_yu7bw")
 
 [node name="Palanca" type="Sprite2D" parent="Rango"]
 scale = Vector2(0.755, 0.755)
-texture = ExtResource("3_s0lum")
+texture = ExtResource("3_ra4wk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_nhcwk")
