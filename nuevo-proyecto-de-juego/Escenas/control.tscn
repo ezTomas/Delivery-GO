@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqdafmvfvbjdq"]
+[gd_scene load_steps=8 format=3 uid="uid://bqdafmvfvbjdq"]
 
 [ext_resource type="Script" uid="uid://30u3cl3dvee2" path="res://Escenas/botones.gd" id="1_050l1"]
+[ext_resource type="Script" uid="uid://bpgp6nxa4tpv7" path="res://Escenas/control.gd" id="1_ef3n6"]
 [ext_resource type="Texture2D" uid="uid://biqkbpx4upi2h" path="res://Escenas/JUGAR.png" id="2_piirt"]
 [ext_resource type="Texture2D" uid="uid://cysjv6i2kcmry" path="res://Escenas/TIENDA.png" id="3_ef3n6"]
 [ext_resource type="Texture2D" uid="uid://cgays5ehrjvi4" path="res://Escenas/AYUDA.png" id="4_gwn7a"]
@@ -14,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ef3n6")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

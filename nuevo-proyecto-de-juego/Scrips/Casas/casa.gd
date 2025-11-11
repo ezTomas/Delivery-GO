@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var puntuable: bool = true
+
 var speed = 300
 
 func _physics_process(delta: float) -> void:

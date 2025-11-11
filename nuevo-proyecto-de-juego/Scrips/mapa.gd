@@ -27,9 +27,11 @@ var obstaculos=[
 ]
 
 func _ready() -> void:
+	
 	randomize()
 	GlobalPoints.points_nivel1 = 0
 	GlobalPoints.rivalPoints = 0
+	MusicManager.audio_stream_player.stop()
 	audio_stream_player.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
