@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Nuevo Proyecto de Juego"
-run/main_scene="uid://d0k4e2sk2mmnm"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+run/main_scene="uid://0sfufiylfjno"
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
