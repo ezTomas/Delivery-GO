@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://chxb74ox765t5"]
+
+[ext_resource type="Script" uid="uid://3igts76geyoq" path="res://Scrips/Casas/casa.gd" id="1_g40lm"]
+[ext_resource type="Texture2D" uid="uid://ycn2l03cofqt" path="res://Assets/Casas/Local.png" id="2_46kao"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tksr"]
+size = Vector2(122, 128)
+
+[node name="Local_rival_puntos" type="CharacterBody2D"]
+modulate = Color(1, 1, 0.44705883, 1)
+script = ExtResource("1_g40lm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.27999887, 0.35999948)
+texture = ExtResource("2_46kao")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Casa_Rival"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4, -3)
+shape = SubResource("RectangleShape2D_8tksr")

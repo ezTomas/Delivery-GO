@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8akveiu0fogn"]
+
+[ext_resource type="Script" uid="uid://c51t2ugc662k5" path="res://Scrips/bullet_rival.gd" id="1_67brh"]
+[ext_resource type="Texture2D" uid="uid://cdi33bnfcjfp0" path="res://Assets/Entregas/Entrega3.png" id="2_4n6he"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ny7oc"]
+size = Vector2(28, 46)
+
+[node name="bulletRival" type="CharacterBody2D" groups=["Bala"]]
+script = ExtResource("1_67brh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(0.265, 0.265)
+texture = ExtResource("2_4n6he")
+
+[node name="AreaBalaRival" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBalaRival"]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_ny7oc")
+
+[connection signal="area_entered" from="AreaBalaRival" to="." method="_on_area_bala_rival_area_entered"]

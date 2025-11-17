@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://bqdafmvfvbjdq"]
+
+[ext_resource type="Script" uid="uid://30u3cl3dvee2" path="res://Escenas/botones.gd" id="1_050l1"]
+[ext_resource type="PackedScene" uid="uid://w3trnto4p2r" path="res://Escenas/Menú de Créditos/Creditos.tscn" id="2_ef3n6"]
+[ext_resource type="PackedScene" uid="uid://kqu52srgrgwv" path="res://Escenas/Menú de Ayuda/Ayuda.tscn" id="2_gwn7a"]
+[ext_resource type="Texture2D" uid="uid://biqkbpx4upi2h" path="res://Escenas/JUGAR.png" id="2_piirt"]
+[ext_resource type="Texture2D" uid="uid://cysjv6i2kcmry" path="res://Escenas/TIENDA.png" id="3_ef3n6"]
+[ext_resource type="Texture2D" uid="uid://cgays5ehrjvi4" path="res://Escenas/AYUDA.png" id="4_gwn7a"]
+[ext_resource type="Texture2D" uid="uid://dc4yxbt80g600" path="res://Escenas/CREDITOS.png" id="5_tmfcw"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 720.0
+color = Color(0.190762, 0.190762, 0.190762, 1)
+
+[node name="Botones" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 160.0
+offset_right = 521.0
+offset_bottom = 684.0
+script = ExtResource("1_050l1")
+Ayuda = ExtResource("2_gwn7a")
+Creditos = ExtResource("2_ef3n6")
+
+[node name="B_Jugar" type="Button" parent="Botones"]
+layout_mode = 2
+icon = ExtResource("2_piirt")
+
+[node name="B_Tienda" type="Button" parent="Botones"]
+layout_mode = 2
+icon = ExtResource("3_ef3n6")
+
+[node name="B_Ayuda" type="Button" parent="Botones"]
+layout_mode = 2
+icon = ExtResource("4_gwn7a")
+
+[node name="B_Creditos" type="Button" parent="Botones"]
+layout_mode = 2
+icon = ExtResource("5_tmfcw")
+
+[connection signal="button_down" from="Botones/B_Jugar" to="Botones" method="Jugar_on_button_button_down"]
+[connection signal="button_down" from="Botones/B_Tienda" to="Botones" method="Tienda_on_button_button_down"]
+[connection signal="button_down" from="Botones/B_Ayuda" to="Botones" method="Ayuda_on_button_button_down"]
+[connection signal="button_down" from="Botones/B_Creditos" to="Botones" method="Creditos_on_button_button_down"]

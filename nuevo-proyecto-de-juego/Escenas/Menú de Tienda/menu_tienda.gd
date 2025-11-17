@@ -1,14 +1,11 @@
 extends Control
 
-
-@onready var modal_Ads = $ModalAds
-
-
-func _on_button_button_down() -> void:
-	get_tree().change_scene_to_file("res://Escenas/control.tscn")
-
-
+@onready var modal_ads: ColorRect = $Modal_ads
 
 
 func _on_ver_button_down() -> void:
-	modal_Ads.MostrarAds()
+	modal_ads.mostrarAds()
+
+
+func _on_volver_button_down() -> void:
+	get_tree().change_scene_to_file("res://Escenas/control.tscn")

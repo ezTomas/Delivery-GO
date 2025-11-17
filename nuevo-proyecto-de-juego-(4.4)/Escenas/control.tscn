@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=3 uid="uid://bqdafmvfvbjdq"]
+
+[ext_resource type="Script" uid="uid://30u3cl3dvee2" path="res://Escenas/botones.gd" id="1_050l1"]
+[ext_resource type="Script" uid="uid://bpgp6nxa4tpv7" path="res://Escenas/control.gd" id="1_ef3n6"]
+[ext_resource type="Texture2D" uid="uid://biqkbpx4upi2h" path="res://Escenas/JUGAR.png" id="2_piirt"]
+[ext_resource type="Texture2D" uid="uid://cysjv6i2kcmry" path="res://Escenas/TIENDA.png" id="3_ef3n6"]
+[ext_resource type="Texture2D" uid="uid://cgays5ehrjvi4" path="res://Escenas/AYUDA.png" id="4_gwn7a"]
+[ext_resource type="Texture2D" uid="uid://dc4yxbt80g600" path="res://Escenas/CREDITOS.png" id="5_tmfcw"]
+[ext_resource type="Texture2D" uid="uid://bb6gibb6a74cc" path="res://Escenas/Logo.png" id="6_piirt"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ef3n6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 65
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 70
+
+[node name="Botones" type="VBoxContainer" parent="HBoxContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 29
+script = ExtResource("1_050l1")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer2/VBoxContainer/HBoxContainer/Botones"]
+layout_mode = 2
+theme_override_constants/margin_left = 550
+theme_override_constants/margin_right = 70
+
+[node name="B_Jugar" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer/Botones"]
+layout_mode = 2
+icon = ExtResource("2_piirt")
+flat = true
+
+[node name="B_Tienda" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer/Botones"]
+layout_mode = 2
+icon = ExtResource("3_ef3n6")
+flat = true
+
+[node name="B_Ayuda" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer/Botones"]
+layout_mode = 2
+icon = ExtResource("4_gwn7a")
+flat = true
+
+[node name="B_Creditos" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer/Botones"]
+layout_mode = 2
+icon = ExtResource("5_tmfcw")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("6_piirt")
+
+[connection signal="button_down" from="HBoxContainer2/VBoxContainer/HBoxContainer/Botones/B_Jugar" to="HBoxContainer2/VBoxContainer/HBoxContainer/Botones" method="Jugar_on_button_button_down"]
+[connection signal="button_down" from="HBoxContainer2/VBoxContainer/HBoxContainer/Botones/B_Tienda" to="HBoxContainer2/VBoxContainer/HBoxContainer/Botones" method="Tienda_on_button_button_down"]
+[connection signal="button_down" from="HBoxContainer2/VBoxContainer/HBoxContainer/Botones/B_Ayuda" to="HBoxContainer2/VBoxContainer/HBoxContainer/Botones" method="Ayuda_on_button_button_down"]
+[connection signal="button_down" from="HBoxContainer2/VBoxContainer/HBoxContainer/Botones/B_Creditos" to="HBoxContainer2/VBoxContainer/HBoxContainer/Botones" method="Creditos_on_button_button_down"]

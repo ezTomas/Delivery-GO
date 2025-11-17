@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlso02e8kkfvx"]
+
+[ext_resource type="Script" uid="uid://chjx6hnk0kv82" path="res://EscenaDerrota.gd" id="1_1gyjl"]
+[ext_resource type="Texture2D" uid="uid://bjyqv00bu3muo" path="res://Escenas/Menú de Créditos/Fondo.png" id="2_f38oc"]
+[ext_resource type="Texture2D" uid="uid://c0sq0wx8qw7xc" path="res://Scene/Logo.png" id="3_mnhid"]
+[ext_resource type="Texture2D" uid="uid://dttnd2lnbcrfb" path="res://Escenas/Menú de Niveles/REINICIAR NIVEL.png" id="4_f38oc"]
+[ext_resource type="Texture2D" uid="uid://bwg73n8eyhovp" path="res://Scene/TIENDA.png" id="4_si8dm"]
+[ext_resource type="Texture2D" uid="uid://rljawo11wc5h" path="res://Scene/MENU PRINCIPAL (1).png" id="5_2248u"]
+
+[node name="EscenaDerrota" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1gyjl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_f38oc")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 65
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_bottom = -620
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer"]
+modulate = Color(0.459708, 0.459708, 0.459708, 1)
+layout_mode = 2
+texture = ExtResource("3_mnhid")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -845.0
+offset_top = -169.5
+offset_bottom = 169.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="Reiniciar" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_f38oc")
+
+[node name="Tienda" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+icon = ExtResource("4_si8dm")
+flat = true
+
+[node name="Menu Principal" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("5_2248u")
+flat = true
+
+[connection signal="button_down" from="TextureRect/VBoxContainer/Reiniciar" to="." method="_on_reiniciar_button_down"]

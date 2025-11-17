@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0k4e2sk2mmnm"]
+
+[ext_resource type="PackedScene" uid="uid://bnjc1eeqh7dju" path="res://Scene/Player/Player.tscn" id="1_lbiw5"]
+[ext_resource type="Script" uid="uid://dyyys0f01bufh" path="res://Scrips/mapa.gd" id="1_qgw4m"]
+[ext_resource type="PackedScene" uid="uid://71dn50rihf3s" path="res://Scene/Calle.tscn" id="2_8dssv"]
+[ext_resource type="PackedScene" uid="uid://h4kvyinh5df1" path="res://Scene/rival.tscn" id="3_622qf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dssv"]
+size = Vector2(27.02716, 717)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktb2n"]
+size = Vector2(35.055943, 734)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rml5n"]
+size = Vector2(76.467445, 21.141312)
+
+[node name="Mapa" type="Node2D"]
+scale = Vector2(0.99840325, 1)
+script = ExtResource("1_qgw4m")
+
+[node name="CanvasLayer2" parent="." instance=ExtResource("2_8dssv")]
+layer = -1
+
+[node name="Limites" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Limites"]
+position = Vector2(634, 7)
+scale = Vector2(0.99840325, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/StaticBody2D"]
+position = Vector2(3.0047607, 358)
+shape = SubResource("RectangleShape2D_8dssv")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Limites"]
+position = Vector2(1000, 0)
+scale = Vector2(0.99840325, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/StaticBody2D2"]
+position = Vector2(2.5040283, 357)
+shape = SubResource("RectangleShape2D_ktb2n")
+
+[node name="Timers" type="Node2D" parent="."]
+
+[node name="SpawnObstaculo" type="Timer" parent="Timers"]
+wait_time = 2.0
+autostart = true
+
+[node name="SpawnHouseEnemy" type="Timer" parent="Timers"]
+autostart = true
+
+[node name="SpawnHouse" type="Timer" parent="Timers"]
+autostart = true
+
+[node name="SpawnobstaculosEnemy" type="Timer" parent="Timers"]
+wait_time = 2.0
+autostart = true
+
+[node name="Player" parent="." instance=ExtResource("1_lbiw5")]
+position = Vector2(803, 547.99994)
+scale = Vector2(2.6, 2.6396883)
+
+[node name="Rival" parent="." instance=ExtResource("3_622qf")]
+position = Vector2(425, 553)
+scale = Vector2(3.6799974, 3.6799974)
+
+[node name="AreaDeteccion" type="Area2D" parent="Rival"]
+position = Vector2(-77.173965, -95.92398)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rival/AreaDeteccion"]
+position = Vector2(0.5434952, 1.9021759)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_rml5n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -147.0
+offset_bottom = 97.0
+grow_horizontal = 0
+
+[node name="PlayerPoints" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 60.0
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+offset_right = 147.0
+offset_bottom = 97.0
+
+[node name="RivalPoints" type="Label" parent="CanvasLayer/Panel2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="timeout" from="Timers/SpawnObstaculo" to="." method="_on_spawn_obstaculo_timeout"]
+[connection signal="timeout" from="Timers/SpawnHouseEnemy" to="." method="_on_spawn_house_enemy_timeout"]
+[connection signal="timeout" from="Timers/SpawnHouse" to="." method="_on_spawn_house_timeout"]
+[connection signal="timeout" from="Timers/SpawnobstaculosEnemy" to="." method="_on_spawnobstaculos_enemy_timeout"]
+[connection signal="area_entered" from="Rival/AreaDeteccion" to="Rival" method="_on_area_deteccion_area_entered"]

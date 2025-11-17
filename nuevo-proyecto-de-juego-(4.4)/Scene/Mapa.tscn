@@ -1,0 +1,113 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0k4e2sk2mmnm"]
+
+[ext_resource type="PackedScene" uid="uid://bnjc1eeqh7dju" path="res://Scene/Player/Player.tscn" id="1_lbiw5"]
+[ext_resource type="Script" uid="uid://dyyys0f01bufh" path="res://Scrips/mapa.gd" id="1_qgw4m"]
+[ext_resource type="PackedScene" uid="uid://71dn50rihf3s" path="res://Scene/Calle.tscn" id="2_8dssv"]
+[ext_resource type="PackedScene" uid="uid://h4kvyinh5df1" path="res://Scene/rival.tscn" id="3_622qf"]
+[ext_resource type="AudioStream" uid="uid://ckoc7w0t4apcs" path="res://Audio/Quincas Moreira - Robot City  NO COPYRIGHT 8-bit Music.mp3" id="5_ktb2n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dssv"]
+size = Vector2(27.0272, 717)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktb2n"]
+size = Vector2(35.0559, 734)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rml5n"]
+size = Vector2(76.4674, 21.1413)
+
+[node name="Mapa" type="Node2D"]
+scale = Vector2(0.998403, 1)
+script = ExtResource("1_qgw4m")
+
+[node name="CanvasLayer2" parent="." instance=ExtResource("2_8dssv")]
+layer = -1
+
+[node name="Limites" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Limites"]
+position = Vector2(634, 7)
+scale = Vector2(0.998403, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/StaticBody2D"]
+position = Vector2(3.00476, 358)
+shape = SubResource("RectangleShape2D_8dssv")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Limites"]
+position = Vector2(1000, 0)
+scale = Vector2(0.998403, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/StaticBody2D2"]
+position = Vector2(2.50403, 357)
+shape = SubResource("RectangleShape2D_ktb2n")
+
+[node name="Timers" type="Node2D" parent="."]
+
+[node name="SpawnObstaculo" type="Timer" parent="Timers"]
+wait_time = 2.1999999999999997
+autostart = true
+
+[node name="SpawnHouseEnemy" type="Timer" parent="Timers"]
+autostart = true
+
+[node name="SpawnHouse" type="Timer" parent="Timers"]
+autostart = true
+
+[node name="SpawnobstaculosEnemy" type="Timer" parent="Timers"]
+wait_time = 1.9
+autostart = true
+
+[node name="Player" parent="." instance=ExtResource("1_lbiw5")]
+position = Vector2(803, 548)
+scale = Vector2(2.6, 2.63969)
+
+[node name="Rival" parent="." instance=ExtResource("3_622qf")]
+position = Vector2(425, 553)
+scale = Vector2(3.68, 3.68)
+
+[node name="AreaDeteccion" type="Area2D" parent="Rival"]
+position = Vector2(-77.174, -95.924)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rival/AreaDeteccion"]
+position = Vector2(0.543495, 1.90218)
+shape = SubResource("RectangleShape2D_rml5n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -217.0
+offset_top = 1.0
+offset_right = -70.0
+offset_bottom = 98.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerPoints" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 60.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+offset_right = 147.0
+offset_bottom = 97.0
+metadata/_edit_use_anchors_ = true
+
+[node name="RivalPoints" type="Label" parent="CanvasLayer/Panel2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ktb2n")
+volume_db = -26.85
+
+[connection signal="timeout" from="Timers/SpawnObstaculo" to="." method="_on_spawn_obstaculo_timeout"]
+[connection signal="timeout" from="Timers/SpawnHouseEnemy" to="." method="_on_spawn_house_enemy_timeout"]
+[connection signal="timeout" from="Timers/SpawnHouse" to="." method="_on_spawn_house_timeout"]
+[connection signal="timeout" from="Timers/SpawnobstaculosEnemy" to="." method="_on_spawnobstaculos_enemy_timeout"]
+[connection signal="area_entered" from="Rival/AreaDeteccion" to="Rival" method="_on_area_deteccion_area_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

@@ -1,29 +1,23 @@
-extends Control
+extends ColorRect
 
-@onready var colorRect = $ColorRect
-@onready var imagenZorrito = $ColorRect/imagenfalopa
-@onready var timerCerrar = $ColorRect/timerSalida
-@onready var botonCerrar = $ColorRect/cerrarAds
-
-
-func _Ready():
-	visible = false
-	botonCerrar.visible = false
+@onready var texture_rect_2: TextureRect = $TextureRect2
+@onready var salir_ad: Button = $Salir_ad
+@onready var timer: Timer = $Timer
 
 
-func MostrarAds():
-	visible = true
-	botonCerrar.visible = false
-	timerCerrar.wait_time = 25.0
-	timerCerrar.start()
+func _ready():
+	self.visible = false
+	salir_ad.visible = false
+
+func mostrarAds():
+	self.visible = true
+	salir_ad.visible = false
+	timer.wait_time = 10.0
+	timer.start()
+
+func _on_salir_ad_button_down() -> void:
+	self.visible = false
 
 
-
-
-func _on_timer_salida_timeout() -> void:
-	botonCerrar.visible = true
-
-
-
-func _on_cerrar_ads_button_down() -> void:
-	visible = false
+func _on_timer_timeout() -> void:
+	salir_ad.visible = true

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp7ocmyvdowu0"]
+
+[ext_resource type="Script" uid="uid://3igts76geyoq" path="res://Scrips/Casas/casa.gd" id="1_1t4qj"]
+[ext_resource type="Texture2D" uid="uid://5baqhac6vwor" path="res://Assets/Casas/Iglesia.png" id="2_2daac"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhxjt"]
+size = Vector2(122, 128)
+
+[node name="Iglesia_pj_puntos" type="CharacterBody2D"]
+script = ExtResource("1_1t4qj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.44705883, 1)
+scale = Vector2(0.27999887, 0.35999948)
+texture = ExtResource("2_2daac")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Casa"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4, -3)
+shape = SubResource("RectangleShape2D_hhxjt")
