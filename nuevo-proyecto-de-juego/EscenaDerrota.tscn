@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlso02e8kkfvx"]
+[gd_scene load_steps=7 format=3 uid="uid://dumayx76uby5y"]
 
-[ext_resource type="Script" uid="uid://chjx6hnk0kv82" path="res://EscenaDerrota.gd" id="1_1gyjl"]
+[ext_resource type="Script" path="res://EscenaDerrota.gd" id="1_1gyjl"]
 [ext_resource type="Texture2D" uid="uid://bjyqv00bu3muo" path="res://Escenas/Menú de Créditos/Fondo.png" id="2_f38oc"]
 [ext_resource type="Texture2D" uid="uid://c0sq0wx8qw7xc" path="res://Scene/Logo.png" id="3_mnhid"]
 [ext_resource type="Texture2D" uid="uid://dttnd2lnbcrfb" path="res://Escenas/Menú de Niveles/REINICIAR NIVEL.png" id="4_f38oc"]
@@ -17,6 +17,7 @@ grow_vertical = 2
 script = ExtResource("1_1gyjl")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_f38oc")
