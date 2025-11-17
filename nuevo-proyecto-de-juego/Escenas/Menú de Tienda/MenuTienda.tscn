@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bv52x5wspnjft"]
+
+[gd_scene load_steps=11 format=3 uid="uid://bv52x5wspnjft"]
+
 
 [ext_resource type="Script" uid="uid://bvkib4twq17me" path="res://Escenas/Menú de Tienda/menu_tienda.gd" id="1_wsjfw"]
 [ext_resource type="Texture2D" uid="uid://hx8b4e0asqoa" path="res://Escenas/Menú de Tienda/Fondo.png" id="2_b6pbq"]
@@ -6,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://d37mjbktwvb6g" path="res://Escenas/Menú de Tienda/COMPRAR.png" id="6_1thib"]
 [ext_resource type="Texture2D" uid="uid://cwkl3c5v3buua" path="res://Escenas/Menú de Tienda/MEJORAR.png" id="7_xgr2x"]
 [ext_resource type="Texture2D" uid="uid://b16ygqbeuvvcx" path="res://Escenas/Menú de Tienda/OBTENER.png" id="8_g8uh5"]
+[ext_resource type="Script" uid="uid://dco3s4wbjelpu" path="res://Escenas/Menú de Tienda/modal_ads.gd" id="9_eii6g"]
+[ext_resource type="Texture2D" uid="uid://pwhowfl3vkld" path="res://Escenas/Menú de Tienda/6fe8c1498de54c6f3f79210167260695.webp" id="10_abdp3"]
 
 [node name="MenuTienda" type="Control"]
 layout_mode = 3
@@ -27,8 +31,13 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -80.0
-offset_right = 937.0
+
+offset_left = -468.5
+offset_top = -170.0
+offset_right = 468.5
+offset_bottom = -90.0
+grow_horizontal = 2
+
 grow_vertical = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/HBoxContainer"]
@@ -40,6 +49,7 @@ theme_override_constants/margin_right = 95
 
 [node name="Obtener" type="Button" parent="TextureRect/HBoxContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 2
 icon = ExtResource("8_g8uh5")
 flat = true
 
@@ -58,7 +68,6 @@ theme_override_constants/margin_right = 139
 
 [node name="Ver" type="Button" parent="TextureRect/HBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
 icon = ExtResource("5_abdp3")
 flat = true
 
@@ -72,27 +81,43 @@ icon = ExtResource("6_1thib")
 flat = true
 icon_alignment = 1
 
-[node name="MarginContainer3" type="MarginContainer" parent="TextureRect/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 130
-theme_override_constants/margin_right = -30
-theme_override_constants/margin_bottom = 140
 
-[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
-layout_mode = 0
+[node name="ModalAds" type="Control" parent="."]
+visible = false
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-theme_override_constants/margin_left = 60
-theme_override_constants/margin_top = 55
-theme_override_constants/margin_right = -75
+script = ExtResource("9_eii6g")
 
-[node name="Button" type="Button" parent="TextureRect/MarginContainer"]
-layout_mode = 2
-text = "-"
-flat = true
+[node name="ColorRect" type="ColorRect" parent="ModalAds"]
+layout_mode = 0
+offset_right = 1082.0
+offset_bottom = 722.0
+color = Color(0.376471, 0.376471, 0.376471, 0.67451)
 
-[connection signal="pressed" from="TextureRect/HBoxContainer/HBoxContainer/Obtener" to="." method="_on_obtener_pressed"]
-[connection signal="pressed" from="TextureRect/HBoxContainer/HBoxContainer/Mejorar" to="." method="_on_mejorar_pressed"]
-[connection signal="pressed" from="TextureRect/HBoxContainer/HBoxContainer/Ver" to="." method="_on_ver_pressed"]
-[connection signal="pressed" from="TextureRect/HBoxContainer/HBoxContainer/Comprar" to="." method="_on_comprar_pressed"]
-[connection signal="pressed" from="TextureRect/MarginContainer/Button" to="." method="_on_button_pressed"]
+[node name="imagenfalopa" type="TextureRect" parent="ModalAds/ColorRect"]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 225.0
+offset_right = 1351.0
+offset_bottom = 1163.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_abdp3")
+stretch_mode = 3
+
+[node name="cerrarAds" type="Button" parent="ModalAds/ColorRect"]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("3_ow22n")
+
+[node name="timerSalida" type="Timer" parent="ModalAds/ColorRect"]
+one_shot = true
+
+[connection signal="button_down" from="ColorRect/Volver/Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="ColorRect/HBoxContainer/Ver" to="." method="_on_ver_button_down"]
+[connection signal="button_down" from="ModalAds/ColorRect/cerrarAds" to="ModalAds" method="_on_cerrar_ads_button_down"]
+[connection signal="timeout" from="ModalAds/ColorRect/timerSalida" to="." method="_on_timer_salida_timeout"]
+[connection signal="timeout" from="ModalAds/ColorRect/timerSalida" to="ModalAds" method="_on_timer_salida_timeout"]
+

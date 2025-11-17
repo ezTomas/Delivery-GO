@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1d7oxucdnffl"
-path="res://.godot/imported/Bomberos.png-249a0a0091208e25054fe1c99e9eac3c.ctex"
+uid="uid://dttnd2lnbcrfb"
+path="res://.godot/imported/REINICIAR NIVEL.png-0c6c2ef483247ae924c293a424725be1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Casas/Bomberos.png"
-dest_files=["res://.godot/imported/Bomberos.png-249a0a0091208e25054fe1c99e9eac3c.ctex"]
+source_file="res://Escenas/Menú de Niveles/REINICIAR NIVEL.png"
+dest_files=["res://.godot/imported/REINICIAR NIVEL.png-0c6c2ef483247ae924c293a424725be1.ctex"]
 
 [params]
 

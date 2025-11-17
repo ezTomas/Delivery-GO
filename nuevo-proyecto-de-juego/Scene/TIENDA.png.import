@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1d7oxucdnffl"
-path="res://.godot/imported/Bomberos.png-249a0a0091208e25054fe1c99e9eac3c.ctex"
+uid="uid://bwg73n8eyhovp"
+path="res://.godot/imported/TIENDA.png-6bc182539114db7f8f91820a93248625.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Casas/Bomberos.png"
-dest_files=["res://.godot/imported/Bomberos.png-249a0a0091208e25054fe1c99e9eac3c.ctex"]
+source_file="res://Scene/TIENDA.png"
+dest_files=["res://.godot/imported/TIENDA.png-6bc182539114db7f8f91820a93248625.ctex"]
 
 [params]
 

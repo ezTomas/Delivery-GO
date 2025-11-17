@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1d7oxucdnffl"
-path="res://.godot/imported/Bomberos.png-249a0a0091208e25054fe1c99e9eac3c.ctex"
+uid="uid://c0sq0wx8qw7xc"
+path="res://.godot/imported/Logo.png-f0391ea4d00d466d04750534c53bcced.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Casas/Bomberos.png"
-dest_files=["res://.godot/imported/Bomberos.png-249a0a0091208e25054fe1c99e9eac3c.ctex"]
+source_file="res://Scene/Logo.png"
+dest_files=["res://.godot/imported/Logo.png-f0391ea4d00d466d04750534c53bcced.ctex"]
 
 [params]
 

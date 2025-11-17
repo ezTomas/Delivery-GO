@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1d7oxucdnffl"
-path="res://.godot/imported/Bomberos.png-249a0a0091208e25054fe1c99e9eac3c.ctex"
+uid="uid://pwhowfl3vkld"
+path="res://.godot/imported/6fe8c1498de54c6f3f79210167260695.webp-9c34763a843a56ff91d856cb1f76b6f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Casas/Bomberos.png"
-dest_files=["res://.godot/imported/Bomberos.png-249a0a0091208e25054fe1c99e9eac3c.ctex"]
+source_file="res://Escenas/Menú de Tienda/6fe8c1498de54c6f3f79210167260695.webp"
+dest_files=["res://.godot/imported/6fe8c1498de54c6f3f79210167260695.webp-9c34763a843a56ff91d856cb1f76b6f7.ctex"]
 
 [params]
 
