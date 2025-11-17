@@ -29,6 +29,7 @@ func _input(event: InputEvent) -> void:
 			index = -1
 			palanca.position = Vector2.ZERO
 			direccion = Vector2.ZERO
+			
 
 	if event is InputEventScreenDrag && stun == false:
 		if event.index == index:

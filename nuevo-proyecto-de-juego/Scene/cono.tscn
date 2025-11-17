@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5sv3wtk6gol0"]
+
+[ext_resource type="Script" uid="uid://bt5gv1kfoam0j" path="res://Scrips/obstaculo.gd" id="1_0aer2"]
+[ext_resource type="Texture2D" uid="uid://bcyugaw2os3k0" path="res://Assets/Obstaculos/Cono.png" id="2_2hft1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b7umw"]
+radius = 33.01515
+
+[node name="Cono" type="CharacterBody2D"]
+script = ExtResource("1_0aer2")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Obstaculo"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_b7umw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5045041, 0.44799963)
+texture = ExtResource("2_2hft1")

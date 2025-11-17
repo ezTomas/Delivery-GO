@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdwxt2ubf2th4"
+path="res://.godot/imported/Highscore 👾 (16-Bit Arcade No Copyright Music).mp3-72c057e11c0e58975ea53dcd0ee82949.mp3str"
+
+[deps]
+
+source_file="res://Audio/Highscore 👾 (16-Bit Arcade No Copyright Music).mp3"
+dest_files=["res://.godot/imported/Highscore 👾 (16-Bit Arcade No Copyright Music).mp3-72c057e11c0e58975ea53dcd0ee82949.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

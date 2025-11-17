@@ -1,5 +1,6 @@
 extends Control
 
+
 @onready var modal_Ads = $ModalAds
 
 

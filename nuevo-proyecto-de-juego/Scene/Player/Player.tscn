@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnjc1eeqh7dju"]
+[gd_scene load_steps=10 format=3 uid="uid://bnjc1eeqh7dju"]
 
 [ext_resource type="Script" uid="uid://bkqrw85ccvsn0" path="res://Scrips/player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://fh6d0ngp2fsn" path="res://Assets/Jugador/Sprite1-jugador1.png" id="2_fvocf"]
 [ext_resource type="PackedScene" uid="uid://c8qevha8i3wct" path="res://Scene/Player/joy_stick.tscn" id="3_jvxg0"]
-[ext_resource type="Texture2D" uid="uid://w8bft66066xc" path="res://Assets/keyboard_173.png" id="4_fvocf"]
-[ext_resource type="Texture2D" uid="uid://cxgcpytnc1slj" path="res://Assets/keyboard_174.png" id="5_pmp2f"]
+[ext_resource type="Texture2D" uid="uid://dla5d34mm2q2a" path="res://Assets/Jugador/DERECHA.png" id="4_wx5cg"]
+[ext_resource type="Texture2D" uid="uid://dbkvvnqgsox2l" path="res://Assets/Jugador/IZQUIERDA.png" id="5_25uvi"]
+[ext_resource type="Texture2D" uid="uid://cw1lij22vf3ao" path="res://Assets/PAUSA.png" id="6_25uvi"]
+[ext_resource type="PackedScene" uid="uid://0sfufiylfjno" path="res://menu_de_pausa.tscn" id="7_u008n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fvocf"]
 size = Vector2(31, 82)
@@ -36,16 +38,26 @@ position = Vector2(156, 575)
 scale = Vector2(1.215, 1.215)
 
 [node name="MoveRight" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(1162.0001, 584.00006)
-scale = Vector2(2.885, 2.885)
-texture_normal = ExtResource("4_fvocf")
+modulate = Color(0.7294118, 0.7294118, 0.7294118, 1)
+position = Vector2(1163, 584)
+scale = Vector2(0.58, 0.58)
+texture_normal = ExtResource("4_wx5cg")
 action = "Right"
 
 [node name="MoveLeft" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(1002, 584.00006)
-scale = Vector2(2.885, 2.885)
-texture_normal = ExtResource("5_pmp2f")
+modulate = Color(0.7285387, 0.7285387, 0.7285387, 1)
+position = Vector2(983, 584)
+scale = Vector2(0.62, 0.62)
+texture_normal = ExtResource("5_25uvi")
 action = "Left"
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 1213.0001
+offset_right = 1415.6552
+offset_bottom = 193.0
+scale = Vector2(0.33, 0.33)
+icon = ExtResource("6_25uvi")
+flat = true
 
 [node name="TimerStun" type="Timer" parent="."]
 
@@ -53,10 +65,13 @@ action = "Left"
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_pmp2f")
 
+[node name="Menu de pausa" parent="." instance=ExtResource("7_u008n")]
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="pressed" from="CanvasLayer/MoveRight" to="." method="_on_move_right_pressed"]
 [connection signal="released" from="CanvasLayer/MoveRight" to="." method="_on_move_right_released"]
 [connection signal="pressed" from="CanvasLayer/MoveLeft" to="." method="_on_move_left_pressed"]
 [connection signal="released" from="CanvasLayer/MoveLeft" to="." method="_on_move_left_released"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="TimerStun" to="." method="_on_timer_stun_timeout"]
