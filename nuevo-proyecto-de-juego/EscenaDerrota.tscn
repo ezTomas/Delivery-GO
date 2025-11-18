@@ -55,7 +55,7 @@ icon = ExtResource("4_f38oc")
 
 [node name="Tienda" type="Button" parent="TextureRect/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 4
 icon = ExtResource("4_si8dm")
 flat = true
 

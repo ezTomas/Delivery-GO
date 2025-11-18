@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cgf3rds5kcvk"]
+[gd_scene load_steps=11 format=3 uid="uid://cgf3rds5kcvk"]
 
 [ext_resource type="Texture2D" uid="uid://hx8b4e0asqoa" path="res://Escenas/Menú de Tienda/Fondo.png" id="1_iupnt"]
 [ext_resource type="Script" uid="uid://bvkib4twq17me" path="res://Escenas/Menú de Tienda/menu_tienda.gd" id="1_iypld"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dco3s4wbjelpu" path="res://Escenas/Menú de Tienda/modal_ads.gd" id="7_8kip5"]
 [ext_resource type="Texture2D" uid="uid://pwhowfl3vkld" path="res://Escenas/Menú de Tienda/6fe8c1498de54c6f3f79210167260695.webp" id="8_2siv7"]
 [ext_resource type="Texture2D" uid="uid://dbkvvnqgsox2l" path="res://Assets/Jugador/IZQUIERDA.png" id="9_5q8le"]
+[ext_resource type="Script" uid="uid://dyh507p88edij" path="res://color_rect.gd" id="10_2siv7"]
 
 [node name="MenuTienda" type="Control"]
 layout_mode = 3
@@ -109,7 +110,60 @@ flat = true
 [node name="Timer" type="Timer" parent="Modal_ads"]
 wait_time = 10.0
 
+[node name="Modal_Compra" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.84635025, 0.84635025, 0.84635025, 0.41568628)
+script = ExtResource("10_2siv7")
+
+[node name="TextureRect" type="TextureRect" parent="Modal_Compra"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.0
+offset_top = -286.0
+offset_right = 605.0
+offset_bottom = 652.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6065086, 0.61192364)
+texture = ExtResource("8_2siv7")
+
+[node name="Compra" type="Button" parent="Modal_Compra/TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -212.3609
+offset_top = -147.05151
+offset_right = -11.360901
+offset_bottom = -102.05151
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2.1457772, 2.510561)
+icon = ExtResource("5_8kip5")
+
+[node name="Salir" type="Button" parent="Modal_Compra/TextureRect"]
+layout_mode = 0
+offset_left = 11.541468
+offset_top = 9.805145
+offset_right = 189.54147
+offset_bottom = 187.80515
+scale = Vector2(0.7274311, 0.6924364)
+icon = ExtResource("9_5q8le")
+
 [connection signal="button_down" from="TextureRect/Ver" to="." method="_on_ver_button_down"]
+[connection signal="button_down" from="TextureRect/Comprar" to="." method="_on_comprar_button_down"]
 [connection signal="button_down" from="TextureRect/Volver" to="." method="_on_volver_button_down"]
 [connection signal="button_down" from="Modal_ads/Salir_ad" to="Modal_ads" method="_on_salir_ad_button_down"]
 [connection signal="timeout" from="Modal_ads/Timer" to="Modal_ads" method="_on_timer_timeout"]
+[connection signal="button_down" from="Modal_Compra/TextureRect/Salir" to="Modal_Compra" method="_on_salir_button_down"]
