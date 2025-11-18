@@ -103,7 +103,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ktb2n")
-volume_db = -26.85
+volume_db = -17.176
 
 [connection signal="timeout" from="Timers/SpawnObstaculo" to="." method="_on_spawn_obstaculo_timeout"]
 [connection signal="timeout" from="Timers/SpawnHouseEnemy" to="." method="_on_spawn_house_enemy_timeout"]

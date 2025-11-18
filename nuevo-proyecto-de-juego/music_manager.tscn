@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cx5vi0dx61h67"]
+[gd_scene load_steps=3 format=3 uid="uid://b0jp50tcw6ces"]
 
 [ext_resource type="Script" uid="uid://c3xh88ggfo0k4" path="res://music_manager.gd" id="1_rjr7q"]
 [ext_resource type="AudioStream" uid="uid://bdwxt2ubf2th4" path="res://Audio/Highscore 👾 (16-Bit Arcade No Copyright Music).mp3" id="2_rjr7q"]
@@ -8,6 +8,6 @@ script = ExtResource("1_rjr7q")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_rjr7q")
-volume_db = -26.703
+volume_db = -21.767
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

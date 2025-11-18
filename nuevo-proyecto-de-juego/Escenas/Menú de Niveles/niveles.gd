@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 		$"ColorRect/HBoxContainer/3/VBoxContainer/Nivel 3".icon = CANDADO_ABIERTO
 
 func _on_nivel_1_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/Mapa.tscn")
+	get_tree().change_scene_to_file("res://imagen_controles.tscn")
 
 func _on_nivel_2_pressed() -> void:
 	if GlobalPoints.nivel >= 1:
