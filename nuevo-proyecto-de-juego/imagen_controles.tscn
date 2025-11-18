@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://yxwulsabp4wu"]
+
+[ext_resource type="Script" uid="uid://ctcvasvd6q8jb" path="res://imagen_controles.gd" id="1_0at1q"]
+[ext_resource type="Texture2D" uid="uid://bskqr254hwvn0" path="res://Escenas/MenuControles/WhatsApp Image 2025-11-07 at 16.22.45.jpeg" id="2_pjekd"]
+[ext_resource type="Texture2D" uid="uid://dla5d34mm2q2a" path="res://Assets/Jugador/DERECHA.png" id="3_72uri"]
+
+[node name="Imagen controles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0at1q")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_right = 1276.0
+offset_bottom = 720.0
+texture = ExtResource("2_pjekd")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -119.0
+offset_top = 6.0
+offset_right = 62.0
+offset_bottom = 187.0
+grow_horizontal = 0
+scale = Vector2(0.59452546, 0.59452546)
+icon = ExtResource("3_72uri")
+flat = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

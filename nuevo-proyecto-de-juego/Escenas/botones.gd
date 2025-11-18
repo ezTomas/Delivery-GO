@@ -14,3 +14,7 @@ func Ayuda_on_button_button_down() -> void:
 
 func Creditos_on_button_button_down() -> void:
 	get_tree().change_scene_to_file("res://Escenas/Menú de Créditos/Creditos.tscn")
+
+
+func _on_b_controles_button_down() -> void:
+	get_tree().change_scene_to_file("res://controles.tscn")

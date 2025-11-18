@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqdafmvfvbjdq"]
+[gd_scene load_steps=9 format=3 uid="uid://bqdafmvfvbjdq"]
 
 [ext_resource type="Script" uid="uid://30u3cl3dvee2" path="res://Escenas/botones.gd" id="1_050l1"]
 [ext_resource type="Script" uid="uid://bpgp6nxa4tpv7" path="res://Escenas/control.gd" id="1_ef3n6"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cgays5ehrjvi4" path="res://Escenas/AYUDA.png" id="4_gwn7a"]
 [ext_resource type="Texture2D" uid="uid://dc4yxbt80g600" path="res://Escenas/CREDITOS.png" id="5_tmfcw"]
 [ext_resource type="Texture2D" uid="uid://bb6gibb6a74cc" path="res://Escenas/Logo.png" id="6_piirt"]
+[ext_resource type="Texture2D" uid="uid://cjb6dydl0nw4r" path="res://Escenas/MenuControles/CONTROLES.png" id="7_gwn7a"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -48,7 +49,7 @@ theme_override_constants/margin_left = 70
 
 [node name="Botones" type="VBoxContainer" parent="HBoxContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 29
+theme_override_constants/separation = 14
 script = ExtResource("1_050l1")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer2/VBoxContainer/HBoxContainer/Botones"]
@@ -64,6 +65,12 @@ flat = true
 [node name="B_Tienda" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer/Botones"]
 layout_mode = 2
 icon = ExtResource("3_ef3n6")
+flat = true
+
+[node name="B_Controles" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer/Botones"]
+modulate = Color(0.7283124, 0.7283124, 0.6671673, 1)
+layout_mode = 2
+icon = ExtResource("7_gwn7a")
 flat = true
 
 [node name="B_Ayuda" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer/Botones"]
@@ -83,5 +90,6 @@ texture = ExtResource("6_piirt")
 
 [connection signal="button_down" from="HBoxContainer2/VBoxContainer/HBoxContainer/Botones/B_Jugar" to="HBoxContainer2/VBoxContainer/HBoxContainer/Botones" method="Jugar_on_button_button_down"]
 [connection signal="button_down" from="HBoxContainer2/VBoxContainer/HBoxContainer/Botones/B_Tienda" to="HBoxContainer2/VBoxContainer/HBoxContainer/Botones" method="Tienda_on_button_button_down"]
+[connection signal="button_down" from="HBoxContainer2/VBoxContainer/HBoxContainer/Botones/B_Controles" to="HBoxContainer2/VBoxContainer/HBoxContainer/Botones" method="_on_b_controles_button_down"]
 [connection signal="button_down" from="HBoxContainer2/VBoxContainer/HBoxContainer/Botones/B_Ayuda" to="HBoxContainer2/VBoxContainer/HBoxContainer/Botones" method="Ayuda_on_button_button_down"]
 [connection signal="button_down" from="HBoxContainer2/VBoxContainer/HBoxContainer/Botones/B_Creditos" to="HBoxContainer2/VBoxContainer/HBoxContainer/Botones" method="Creditos_on_button_button_down"]

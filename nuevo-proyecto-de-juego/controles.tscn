@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=3 uid="uid://qxjm2nrvx64q"]
+
+[ext_resource type="Texture2D" uid="uid://bjyqv00bu3muo" path="res://Escenas/Menú de Créditos/Fondo.png" id="1_2gckq"]
+[ext_resource type="Script" uid="uid://qdlclkoqhffn" path="res://controles.gd" id="1_i3ln2"]
+[ext_resource type="Texture2D" uid="uid://dbkvvnqgsox2l" path="res://Assets/Jugador/IZQUIERDA.png" id="2_i3ln2"]
+[ext_resource type="Texture2D" uid="uid://dla5d34mm2q2a" path="res://Assets/Jugador/DERECHA.png" id="3_35xyp"]
+[ext_resource type="Texture2D" uid="uid://hy74xp10dbxc" path="res://Escenas/MenuControles/TOCA PARA MOVERTE.png" id="4_87pfy"]
+[ext_resource type="Texture2D" uid="uid://cjb6dydl0nw4r" path="res://Escenas/MenuControles/CONTROLES.png" id="5_aurty"]
+[ext_resource type="Texture2D" uid="uid://bmgtq7iw62uqy" path="res://Assets/LANZAR.png" id="6_qrsp5"]
+[ext_resource type="Texture2D" uid="uid://djjff5bk48yv2" path="res://Escenas/MenuControles/TOCA PARA LANZAR LOS  PEDIDOS.png" id="7_nln3x"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i3ln2")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_2gckq")
+
+[node name="flecha izq" type="TextureRect" parent="Fondo"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 420.0
+offset_right = 326.0
+offset_bottom = 590.0
+scale = Vector2(0.5206319, 0.5206319)
+texture = ExtResource("2_i3ln2")
+
+[node name="Flecha der" type="TextureRect" parent="Fondo"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 419.99997
+offset_right = 425.0
+offset_bottom = 593.0
+scale = Vector2(0.5233852, 0.52063066)
+texture = ExtResource("3_35xyp")
+
+[node name="move" type="TextureRect" parent="Fondo"]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 440.0
+offset_right = 977.0
+offset_bottom = 496.0
+texture = ExtResource("4_87pfy")
+
+[node name="controles" type="TextureRect" parent="Fondo"]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 74.0
+offset_right = 896.0
+offset_bottom = 166.0
+texture = ExtResource("5_aurty")
+
+[node name="diapro" type="TextureRect" parent="Fondo"]
+layout_mode = 0
+offset_left = 216.00002
+offset_top = 213.0
+offset_right = 383.0
+offset_bottom = 382.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_qrsp5")
+
+[node name="lanzar" type="TextureRect" parent="Fondo"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 205.0
+offset_right = 1008.0
+offset_bottom = 336.0
+texture = ExtResource("7_nln3x")
+
+[node name="Button" type="Button" parent="Fondo"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.6399995, 0.6399995)
+icon = ExtResource("2_i3ln2")
+flat = true
+
+[connection signal="button_down" from="Fondo/Button" to="." method="_on_button_button_down"]
