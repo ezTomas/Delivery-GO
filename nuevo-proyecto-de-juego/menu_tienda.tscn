@@ -71,7 +71,16 @@ offset_right = 116.875
 offset_bottom = 99.729996
 flat = true
 
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1103.0001
+offset_top = 4.999999
+offset_right = 1174.0001
+offset_bottom = 28.0
+scale = Vector2(1.3632829, 1.6133125)
+
 [node name="Modal_ads" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -111,6 +120,7 @@ flat = true
 wait_time = 10.0
 
 [node name="Modal_Compra" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -161,9 +171,10 @@ offset_bottom = 187.80515
 scale = Vector2(0.7274311, 0.6924364)
 icon = ExtResource("9_5q8le")
 
+[connection signal="button_down" from="TextureRect/Obtener" to="." method="_on_obtener_button_down"]
 [connection signal="button_down" from="TextureRect/Ver" to="." method="_on_ver_button_down"]
-[connection signal="button_down" from="TextureRect/Comprar" to="." method="_on_comprar_button_down"]
 [connection signal="button_down" from="TextureRect/Volver" to="." method="_on_volver_button_down"]
 [connection signal="button_down" from="Modal_ads/Salir_ad" to="Modal_ads" method="_on_salir_ad_button_down"]
 [connection signal="timeout" from="Modal_ads/Timer" to="Modal_ads" method="_on_timer_timeout"]
+[connection signal="button_down" from="Modal_Compra/TextureRect/Compra" to="Modal_Compra" method="_on_compra_button_down"]
 [connection signal="button_down" from="Modal_Compra/TextureRect/Salir" to="Modal_Compra" method="_on_salir_button_down"]
