@@ -102,6 +102,14 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
+[node name="Propinas" type="Label" parent="CanvasLayer"]
+modulate = Color(1, 1, 0.20392157, 1)
+offset_left = 1158.0
+offset_top = 81.0
+offset_right = 1308.0
+offset_bottom = 141.0
+metadata/_edit_use_anchors_ = true
+
 [connection signal="timeout" from="Timers/SpawnObstaculo" to="." method="_on_spawn_obstaculo_timeout"]
 [connection signal="timeout" from="Timers/SpawnHouseEnemy" to="." method="_on_spawn_house_enemy_timeout"]
 [connection signal="timeout" from="Timers/SpawnHouse" to="." method="_on_spawn_house_timeout"]

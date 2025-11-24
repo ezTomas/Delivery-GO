@@ -5,7 +5,7 @@ extends Control
 @onready var label: Label = $TextureRect/Label
 
 func _process(delta: float) -> void:
-	label.text = (str(GlobalPoints.monedas) + " Monedas")
+	label.text = (str(GlobalPoints.monedas) + " Propinas")
 
 func _on_ver_button_down() -> void:
 	modal_ads.mostrarAds()

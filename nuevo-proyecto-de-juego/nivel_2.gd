@@ -3,6 +3,7 @@ extends Node2D
 @onready var player_points: Label = $CanvasLayer/Panel/PlayerPoints
 @onready var rival_points: Label = $CanvasLayer/Panel2/RivalPoints
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var propinas: Label = $CanvasLayer/Propinas
 
 
 var normal_house = [
@@ -35,6 +36,7 @@ func _ready() -> void:
 	GlobalPoints.points_nivel2 = 0
 	GlobalPoints.rivalPoints = 0
 	audio_stream_player.play()
+	propinas.text = (str(GlobalPoints.monedas) + " Propinas")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

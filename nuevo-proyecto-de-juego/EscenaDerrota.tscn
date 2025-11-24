@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dumayx76uby5y"]
 
-[ext_resource type="Script" path="res://EscenaDerrota.gd" id="1_1gyjl"]
+[ext_resource type="Script" uid="uid://chjx6hnk0kv82" path="res://EscenaDerrota.gd" id="1_1gyjl"]
 [ext_resource type="Texture2D" uid="uid://bjyqv00bu3muo" path="res://Escenas/Menú de Créditos/Fondo.png" id="2_f38oc"]
 [ext_resource type="Texture2D" uid="uid://c0sq0wx8qw7xc" path="res://Scene/Logo.png" id="3_mnhid"]
 [ext_resource type="Texture2D" uid="uid://dttnd2lnbcrfb" path="res://Escenas/Menú de Niveles/REINICIAR NIVEL.png" id="4_f38oc"]
@@ -67,3 +67,5 @@ icon = ExtResource("5_2248u")
 flat = true
 
 [connection signal="button_down" from="TextureRect/VBoxContainer/Reiniciar" to="." method="_on_reiniciar_button_down"]
+[connection signal="button_down" from="TextureRect/VBoxContainer/Tienda" to="." method="_on_tienda_button_down"]
+[connection signal="button_down" from="TextureRect/VBoxContainer/Menu Principal" to="." method="_on_menu_principal_button_down"]

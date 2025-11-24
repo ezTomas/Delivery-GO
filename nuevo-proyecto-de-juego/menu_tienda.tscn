@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://dco3s4wbjelpu" path="res://Escenas/Menú de Tienda/modal_ads.gd" id="7_8kip5"]
 [ext_resource type="Texture2D" uid="uid://pwhowfl3vkld" path="res://Escenas/Menú de Tienda/6fe8c1498de54c6f3f79210167260695.webp" id="8_2siv7"]
 [ext_resource type="Texture2D" uid="uid://dbkvvnqgsox2l" path="res://Assets/Jugador/IZQUIERDA.png" id="9_5q8le"]
-[ext_resource type="Script" uid="uid://dyh507p88edij" path="res://color_rect.gd" id="10_2siv7"]
+[ext_resource type="Script" path="res://color_rect.gd" id="10_2siv7"]
 
 [node name="MenuTienda" type="Control"]
 layout_mode = 3

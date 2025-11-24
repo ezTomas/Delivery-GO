@@ -8,6 +8,9 @@ var speed: float = 200.0
 
 var menuPausa = preload("res://menu_de_pausa.tscn")
 
+func _ready() -> void:
+	randomize()
+
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_axis("Left", "Right")
 	if direction:
@@ -28,9 +31,13 @@ func _on_move_left_released() -> void:
 	$CanvasLayer/MoveLeft.modulate = Color(1, 1, 1)
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	var random = randi_range(0,20)
 	if area.is_in_group("Obstaculo"):
 		joy_stick.stun = true
 		timer_stun.start()
+		if random > 12:
+			GlobalPoints.monedas -= 10
+		
 
 
 func _on_timer_stun_timeout() -> void:

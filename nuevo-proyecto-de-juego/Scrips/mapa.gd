@@ -1,8 +1,9 @@
 extends Node2D
 
-@onready var player_points: Label = $CanvasLayer/Panel/PlayerPoints
+@onready var player_points: Label = $CanvasLayer/PlayerPoints
 @onready var rival_points: Label = $CanvasLayer/Panel2/RivalPoints
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var propinas: Label = $CanvasLayer/Propinas
 
 var normal_house = [
 	preload("res://Scene/Casas/Casas_Jugador/casa.tscn"),
@@ -27,7 +28,6 @@ var obstaculos=[
 ]
 
 func _ready() -> void:
-	
 	randomize()
 	GlobalPoints.points_nivel1 = 0
 	GlobalPoints.rivalPoints = 0
@@ -38,6 +38,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	player_points.text = (str(GlobalPoints.points_nivel1) + " de 10")
 	rival_points.text = (str(GlobalPoints.rivalPoints) + " de 10")
+	propinas.text = (str(GlobalPoints.monedas) + " Propinas")
 
 func _on_spawn_house_timeout() -> void:
 	var randomHouse = randi_range(1,10)
